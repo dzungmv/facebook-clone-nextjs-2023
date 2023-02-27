@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/sidebar/friend.png",
+        "name": "Friends",
+        "href": "/friends"
+    },
+    {
+        "id": 2,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/sidebar/savepng.png",
+        "name": "Saved",
+        "href": "/saved-page"
+    },
+    {
+        "id": 3,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/sidebar/group.png",
+        "name": "Groups",
+        "href": "/groups"
+    },
+    {
+        "id": 4,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/sidebar/watch.png",
+        "name": "Watch",
+        "href": "/watch"
+    },
+    {
+        "id": 5,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/sidebar/ads.png",
+        "name": "Ad Centre",
+        "href": "/ad-centre"
+    },
+    {
+        "id": 6,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/sidebar/blood.png",
+        "name": "Blood Donation",
+        "href": "/blood-donation"
+    },
+    {
+        "id": 7,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/sidebar/climate.png",
+        "name": "Climate Science Centre",
+        "href": "/climate-science-centre"
+    },
+    {
+        "id": 8,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/sidebar/event.png",
+        "name": "Events",
+        "href": "/events"
+    },
+    {
+        "id": 9,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/sidebar/favourious.png",
+        "name": "Favourious",
+        "href": "/favourious"
+    },
+    {
+        "id": 10,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/sidebar/fundraiser.png",
+        "name": "Fundraisers",
+        "href": "/fundraisers"
+    },
+    {
+        "id": 11,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/sidebar/gaming.png",
+        "name": "Gaming",
+        "href": "/gaming"
+    },
+    {
+        "id": 12,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/sidebar/livestreem.png",
+        "name": "Live videos",
+        "href": "/live-videos"
+    },
+    {
+        "id": 13,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/sidebar/market.png",
+        "name": "Marketplace",
+        "href": "/marketplace"
+    },
+    {
+        "id": 14,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/sidebar/memory.png",
+        "name": "Memories",
+        "href": "/memories"
+    },
+    {
+        "id": 15,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/sidebar/page.png",
+        "name": "Pages",
+        "href": "/pages"
+    }
+]

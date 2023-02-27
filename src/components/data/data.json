@@ -1,0 +1,227 @@
+{
+    "user": {
+        "name": "Minh Dzung",
+        "email": "jungjung.now@gmail.com",
+        "avatar": "https://jungjung261.blob.core.windows.net/nextjs-project/user/avatar.jpg",
+        "story": {
+            "title": "My Story",
+            "media": "https://jungjung261.blob.core.windows.net/nextjs-project/user/story.jpg"
+        },
+        "post": [
+            {
+                "post_id": 7,
+                "caption": "Monaliduck",
+                "media": [
+                    "https://jungjung261.blob.core.windows.net/nextjs-project/user/post.jpg"
+                ],
+                "createddAt": "30/12/2022"
+            }
+        ],
+        "comment": [
+            {
+                "post_id": 1,
+                "user_id": 1,
+                "user_name": "Đài Phát Thanh",
+                "user_avatar": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user3/avatar.jpg",
+                "content": "Nice !"
+            }
+        ],
+        "page": {
+            "name": "CareFree++",
+            "page_avatar": "https://jungjung261.blob.core.windows.net/nextjs-project/user/page/page_avatar.jpg"
+        },
+        "friend_request": [
+            {
+                "user_id": 1,
+                "user_name": "Đài Phát Thanh",
+                "user_avatar": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user3/avatar.jpg",
+                "friend_mutual": 2,
+                "time_request": "23/12/2022"
+            }
+        ]
+    },
+
+    "users": [
+        {
+            "id": 1,
+            "name": "Minh Dzung",
+            "email": "jungjung.now@gmail.com",
+            "avatar": "https://jungjung261.blob.core.windows.net/nextjs-project/user/avatar.jpg",
+            "story": {
+                "title": "My Story",
+                "media": "https://jungjung261.blob.core.windows.net/nextjs-project/user/story.jpg"
+            },
+            "post": [
+                {
+                    "post_id": 1,
+                    "caption": "Monaliduck",
+                    "media": [
+                        "https://jungjung261.blob.core.windows.net/nextjs-project/user/post.jpg"
+                    ],
+                    "createddAt": "30/12/2022"
+                }
+            ],
+            "comment": [
+                {
+                    "post_id": 1,
+                    "user_id": 1,
+                    "user_name": "Đài Phát Thanh",
+                    "user_avatar": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user3/avatar.jpg",
+                    "content": "Nice !"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "MTP",
+            "email": "sontung.now@gmail.com",
+            "avatar": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user1/mpt.jpg",
+            "story": {
+                "title": "Hehe",
+                "media": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user1/story.jpg"
+            },
+            "post": [
+                {
+                    "caption": "Dress up for a special event !",
+                    "media": [
+                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user1/post1.jpg",
+                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user1/post2.jpg"
+                    ],
+                    "createddAt": "28/12/2022"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Đảo mèo",
+            "email": "daomeo.now@gmail.com",
+            "avatar": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user2/avatar.jpg",
+            "story": {
+                "title": "My Story",
+                "media": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user2/story.jpg"
+            },
+            "post": [
+                {
+                    "caption": "Moew Moew",
+                    "media": [
+                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user2/post.jpg"
+                    ],
+                    "createddAt": "30/12/2022"
+                }
+            ],
+            "comment": [
+                {
+                    "post_id": 3,
+                    "user_id": 1,
+                    "user_name": "Đài Phát Thanh",
+                    "user_avatar": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user3/avatar.jpg",
+                    "content": "Nice !"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Đài Phát Thanh.",
+            "email": "jungjung.now@gmail.com",
+            "avatar": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user3/avatar.jpg",
+            "story": {
+                "title": "My Story",
+                "media": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user3/story.jpg"
+            },
+            "post": [
+                {
+                    "caption": "Have a nice day !",
+                    "media": [
+                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user3/post1.jpg",
+                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user3/post2.jpg",
+                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user3/post3.jpg"
+                    ],
+                    "createddAt": "30/12/2022"
+                }
+            ]
+        },
+
+        {
+            "id": 5,
+            "name": "Một chiếc page về mèo giúp bạn thoát khỏi ckầm kẻm",
+            "email": "mew.now@gmail.com",
+            "avatar": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user4/avatar.jpg",
+            "story": {
+                "title": "My Story",
+                "media": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user4/story.jpg"
+            },
+            "post": [
+                {
+                    "caption": "Mèo đẹp trai",
+                    "media": [
+                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user4/post.jpg"
+                    ],
+                    "createddAt": "30/12/2022"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Mèo",
+            "email": "jungjung.now@gmail.com",
+            "avatar": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user5/avatar.jpg",
+            "story": {
+                "title": "My Story",
+                "media": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user5/story.jpg"
+            },
+            "post": [
+                {
+                    "caption": "Được mặc áo ngyeu belike:",
+                    "media": [
+                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user5/post1.jpg",
+                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user5/post2.png",
+                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user5/post3.png",
+                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user5/post4.png"
+                    ],
+                    "createddAt": "30/12/2022"
+                }
+            ],
+            "comment": [
+                {
+                    "post_id": 6,
+                    "user_id": 1,
+                    "user_name": "Đài Phát Thanh",
+                    "user_avatar": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user3/avatar.jpg",
+                    "content": "Đúng thế"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Những con người thất tình",
+            "email": "jungjung.now@gmail.com",
+            "avatar": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user6/avatar.jpg",
+            "story": {
+                "title": "My Story",
+                "media": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user6/story.jpg"
+            },
+            "post": [
+                {
+                    "caption": "Ngày hôm nay có cả triệu cô gái hạnh phúc, Lại có những cô gái đã khóc rất nhiều…",
+                    "media": [
+                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user6/post1.jpg",
+                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user6/post2.jpg",
+                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user6/post3.jpg",
+                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user6/post4.jpg",
+                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user6/post5.jpg"
+                    ],
+                    "createddAt": "30/12/2022"
+                }
+            ],
+            "comment": [
+                {
+                    "post_id": 7,
+                    "user_id": 1,
+                    "user_name": "Đài Phát Thanh",
+                    "user_avatar": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user3/avatar.jpg",
+                    "content": "Đúng thế"
+                }
+            ]
+        }
+    ]
+}

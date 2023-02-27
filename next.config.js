@@ -1,8 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
-}
+    experimental: {
+        appDir: true,
+    },
 
-module.exports = nextConfig
+    images: {
+        domains: ['jungjung261.blob.core.windows.net'],
+    },
+};
+
+module.exports = nextConfig;

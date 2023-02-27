@@ -1,0 +1,66 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a:hover,
+a:focus {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:focus,
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+    vertical-align: middle;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    font-family: 'Inter';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.tippy-box[data-theme~='light'] {
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}

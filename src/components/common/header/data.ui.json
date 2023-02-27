@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/navigation/h.svg",
+        "icon_active": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/navigation/home-a.svg",
+        "name": "Home",
+        "url": "/"
+    },
+    {
+        "id": 2,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/navigation/f.svg",
+        "icon_active": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/navigation/flag-a.svg",
+        "name": "Pages",
+        "url": "/pages"
+    },
+    {
+        "id": 3,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/navigation/w.svg",
+        "icon_active": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/navigation/w-a.svg",
+        "name": "Watch",
+        "url": "/watch"
+    },
+    {
+        "id": 4,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/navigation/m.svg",
+        "icon_active": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/navigation/m-a.svg",
+        "name": "Marketplace",
+        "url": "/marketplace"
+    },
+    {
+        "id": 5,
+        "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/navigation/g.svg",
+        "icon_active": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/navigation/g-a.svg",
+        "name": "Groups",
+        "url": "/groups"
+    }
+]
