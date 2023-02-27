@@ -200,12 +200,18 @@
             }
         }
     }
+
+    @media screen and (max-width: 600px) {
+        :global .header-left {
+            width: 70%;
+        }
+    }
 }
 
 .wrapperHeaderMenu {
     width: 50%;
     height: 100vh;
-    padding: 16px;
+    padding: 0 16px;
     background-color: rgba(255, 255, 255);
     position: fixed;
     top: 0;
@@ -218,6 +224,10 @@
     :global .menu-heading {
         display: flex;
         justify-content: space-between;
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+        padding: 16px 0;
 
         &-branch {
             color: var.$color_primary;
@@ -303,6 +313,10 @@
         100% {
             transform: translateX(0);
         }
+    }
+
+    @media screen and (max-width: 600px) {
+        width: 100%;
     }
 }
 

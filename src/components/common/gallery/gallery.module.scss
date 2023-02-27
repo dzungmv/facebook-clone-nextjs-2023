@@ -4,8 +4,8 @@
     grid-template-rows: 200px 200px;
     gap: 4px;
 
-    @media screen and (max-width: 739px) {
-        margin: 0 -8px !important;
+    @media screen and (max-width: 600px) {
+        // margin: 0 -16px !important;
         grid-template-rows: 150px 150px;
     }
 
