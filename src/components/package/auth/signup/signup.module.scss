@@ -1,0 +1,109 @@
+@use '../../../styles/variables' as var;
+
+.wrapperSignUp {
+    max-width: 432px;
+    width: 100%;
+    padding: 16px;
+
+    @media screen and (max-width: 739px) {
+        max-width: 100%;
+    }
+
+    :global .form-group {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0 12px;
+
+        .form-control {
+            width: calc(100% / 2);
+        }
+    }
+
+    :global .form-control {
+        height: 40px;
+        margin-bottom: 10px;
+
+        input {
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgba(22, 24, 35, 0.1);
+            border-radius: 8px;
+            padding: 0 8px;
+            font-size: 15px;
+        }
+    }
+
+    :global .form-label {
+        margin-bottom: 10px;
+        label {
+            font-size: 12px;
+            color: #606770;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0 5px;
+            margin-bottom: 4px;
+
+            span {
+                width: 12px;
+                height: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #606770;
+                border-radius: 50%;
+                color: #fff;
+            }
+        }
+    }
+
+    :global .form-desc {
+        font-size: 12px;
+        margin-bottom: 12px;
+
+        a {
+            color: var.$color_primary;
+        }
+    }
+
+    :global .form-btn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 32px;
+
+        button {
+            width: 50%;
+            padding: 10px 0;
+            border-radius: 8px;
+            background-color: #00a400;
+
+            font-size: 20px;
+            font-weight: 500;
+            color: #fff;
+
+            &:hover {
+                background-color: #008700;
+            }
+        }
+    }
+
+    :global .date-custom {
+        display: flex;
+        align-items: center;
+        gap: 0 12px;
+
+        &-item {
+            width: calc(100% / 3);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid rgba(22, 24, 35, 0.2);
+            border-radius: 4px;
+            padding: 6px 8px;
+            font-size: 15px;
+        }
+    }
+}

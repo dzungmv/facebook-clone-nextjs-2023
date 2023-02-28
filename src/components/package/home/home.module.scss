@@ -36,6 +36,7 @@
     }
 
     @media screen and (max-width: 600px) {
+        padding: 8px;
         :global .homepage-item-center {
             width: 100%;
         }
@@ -52,6 +53,7 @@
     max-height: calc(100vh - 66px);
     overflow: auto;
     padding-bottom: 16px;
+    margin-left: -8px;
     // left: 0;
     :global .container {
         width: 100%;
@@ -86,7 +88,7 @@
 
             &-name {
                 font-size: 14px;
-                font-weight: 500;
+                font-weight: 400;
                 line-height: calc(20 / 14);
             }
         }
@@ -379,6 +381,26 @@
                     line-height: calc(24 / 14);
                     font-weight: 500;
                     color: var.$color_text;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        :global .create-post {
+            &-content {
+                &-input {
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+            &-footer {
+                flex-wrap: wrap;
+                justify-content: center;
+
+                &-item {
+                    width: calc(100% / 2);
                 }
             }
         }

@@ -85,7 +85,7 @@ export default function PersonalTooltip({ data, isRef }) {
 
                 <div
                     className='tool-item'
-                    onClick={() => router.push('/login')}>
+                    onClick={() => router.push('/auth/login')}>
                     <div className='tool-item-icon'>
                         <i className='fa-solid fa-arrow-right-from-bracket'></i>
                     </div>

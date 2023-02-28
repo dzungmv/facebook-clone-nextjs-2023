@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-// import { useRouter } from 'next/navigation';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/themes/light.css';
 import Image from 'next/image';
@@ -16,7 +15,6 @@ import Search from './search';
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);
-
     const pathname = usePathname();
 
     return (
@@ -43,13 +41,13 @@ const Header = () => {
                             content={item.name}
                             theme='light'
                             delay={[500, 0]}>
-                            <div
+                            <Link
+                                href={item.url}
                                 className={
                                     item.url === pathname
                                         ? 'header-center-item tab-active'
                                         : 'header-center-item'
-                                }
-                                onClick={() => handleClickTab(item.url)}>
+                                }>
                                 <div className='header-center-item-child'>
                                     <Image
                                         className='header-center-item-child-main_img'
@@ -73,7 +71,7 @@ const Header = () => {
                                     />
                                 </div>
                                 <div className='line-active'></div>
-                            </div>
+                            </Link>
                         </Tippy>
                     ))}
                 </div>
