@@ -111,11 +111,11 @@ const Header = () => {
                         </div>
                     </Tippy>
 
-                    <div
+                    <button
                         className='header-right-item toggle-bar'
                         onClick={() => setToggle((prev) => !prev)}>
                         <i className='fa-solid fa-bars'></i>
-                    </div>
+                    </button>
 
                     <Tippy
                         content='Account'

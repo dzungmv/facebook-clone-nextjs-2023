@@ -1,7 +1,7 @@
-import '@/components/styles/globals.css';
+import '@/components/styles/globals.scss';
 
 export const metadata = {
-    title: 'Facebook NextJS',
+    title: 'Facebook | NextJS',
     description: 'Clone faecbook UI with NextJS latest version',
 };
 

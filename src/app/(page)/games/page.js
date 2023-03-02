@@ -1,8 +1,9 @@
+import GamesPages from '@/components/games';
+
 export default function Page() {
     return (
         <>
-            <h1>Page</h1>
-            <p>Page content</p>
+            <GamesPages />
         </>
     );
 }

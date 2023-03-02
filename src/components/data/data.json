@@ -51,16 +51,14 @@
                 "title": "My Story",
                 "media": "https://jungjung261.blob.core.windows.net/nextjs-project/user/story.jpg"
             },
-            "post": [
-                {
-                    "post_id": 1,
-                    "caption": "Monaliduck",
-                    "media": [
-                        "https://jungjung261.blob.core.windows.net/nextjs-project/user/post.jpg"
-                    ],
-                    "createddAt": "30/12/2022"
-                }
-            ],
+            "post": {
+                "post_id": 1,
+                "caption": "Monaliduck",
+                "media": [
+                    "https://jungjung261.blob.core.windows.net/nextjs-project/user/post.jpg"
+                ],
+                "createddAt": "30/12/2022"
+            },
             "comment": [
                 {
                     "post_id": 1,
@@ -80,16 +78,14 @@
                 "title": "Hehe",
                 "media": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user1/story.jpg"
             },
-            "post": [
-                {
-                    "caption": "Dress up for a special event !",
-                    "media": [
-                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user1/post1.jpg",
-                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user1/post2.jpg"
-                    ],
-                    "createddAt": "28/12/2022"
-                }
-            ]
+            "post": {
+                "caption": "Dress up for a special event !",
+                "media": [
+                    "https://jungjung261.blob.core.windows.net/nextjs-project/users/user1/post1.jpg",
+                    "https://jungjung261.blob.core.windows.net/nextjs-project/users/user1/post2.jpg"
+                ],
+                "createddAt": "28/12/2022"
+            }
         },
         {
             "id": 3,
@@ -100,15 +96,13 @@
                 "title": "My Story",
                 "media": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user2/story.jpg"
             },
-            "post": [
-                {
-                    "caption": "Moew Moew",
-                    "media": [
-                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user2/post.jpg"
-                    ],
-                    "createddAt": "30/12/2022"
-                }
-            ],
+            "post": {
+                "caption": "Moew Moew",
+                "media": [
+                    "https://jungjung261.blob.core.windows.net/nextjs-project/users/user2/post.jpg"
+                ],
+                "createddAt": "30/12/2022"
+            },
             "comment": [
                 {
                     "post_id": 3,
@@ -128,17 +122,15 @@
                 "title": "My Story",
                 "media": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user3/story.jpg"
             },
-            "post": [
-                {
-                    "caption": "Have a nice day !",
-                    "media": [
-                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user3/post1.jpg",
-                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user3/post2.jpg",
-                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user3/post3.jpg"
-                    ],
-                    "createddAt": "30/12/2022"
-                }
-            ]
+            "post": {
+                "caption": "Have a nice day !",
+                "media": [
+                    "https://jungjung261.blob.core.windows.net/nextjs-project/users/user3/post1.jpg",
+                    "https://jungjung261.blob.core.windows.net/nextjs-project/users/user3/post2.jpg",
+                    "https://jungjung261.blob.core.windows.net/nextjs-project/users/user3/post3.jpg"
+                ],
+                "createddAt": "30/12/2022"
+            }
         },
 
         {
@@ -150,15 +142,13 @@
                 "title": "My Story",
                 "media": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user4/story.jpg"
             },
-            "post": [
-                {
-                    "caption": "Mèo đẹp trai",
-                    "media": [
-                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user4/post.jpg"
-                    ],
-                    "createddAt": "30/12/2022"
-                }
-            ]
+            "post": {
+                "caption": "Mèo đẹp trai",
+                "media": [
+                    "https://jungjung261.blob.core.windows.net/nextjs-project/users/user4/post.jpg"
+                ],
+                "createddAt": "30/12/2022"
+            }
         },
         {
             "id": 6,
@@ -169,18 +159,16 @@
                 "title": "My Story",
                 "media": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user5/story.jpg"
             },
-            "post": [
-                {
-                    "caption": "Được mặc áo ngyeu belike:",
-                    "media": [
-                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user5/post1.jpg",
-                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user5/post2.png",
-                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user5/post3.png",
-                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user5/post4.png"
-                    ],
-                    "createddAt": "30/12/2022"
-                }
-            ],
+            "post": {
+                "caption": "Được mặc áo ngyeu belike:",
+                "media": [
+                    "https://jungjung261.blob.core.windows.net/nextjs-project/users/user5/post1.jpg",
+                    "https://jungjung261.blob.core.windows.net/nextjs-project/users/user5/post2.png",
+                    "https://jungjung261.blob.core.windows.net/nextjs-project/users/user5/post3.png",
+                    "https://jungjung261.blob.core.windows.net/nextjs-project/users/user5/post4.png"
+                ],
+                "createddAt": "30/12/2022"
+            },
             "comment": [
                 {
                     "post_id": 6,
@@ -200,19 +188,17 @@
                 "title": "My Story",
                 "media": "https://jungjung261.blob.core.windows.net/nextjs-project/users/user6/story.jpg"
             },
-            "post": [
-                {
-                    "caption": "Ngày hôm nay có cả triệu cô gái hạnh phúc, Lại có những cô gái đã khóc rất nhiều…",
-                    "media": [
-                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user6/post1.jpg",
-                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user6/post2.jpg",
-                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user6/post3.jpg",
-                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user6/post4.jpg",
-                        "https://jungjung261.blob.core.windows.net/nextjs-project/users/user6/post5.jpg"
-                    ],
-                    "createddAt": "30/12/2022"
-                }
-            ],
+            "post": {
+                "caption": "Ngày hôm nay có cả triệu cô gái hạnh phúc, Lại có những cô gái đã khóc rất nhiều…",
+                "media": [
+                    "https://jungjung261.blob.core.windows.net/nextjs-project/users/user6/post1.jpg",
+                    "https://jungjung261.blob.core.windows.net/nextjs-project/users/user6/post2.jpg",
+                    "https://jungjung261.blob.core.windows.net/nextjs-project/users/user6/post3.jpg",
+                    "https://jungjung261.blob.core.windows.net/nextjs-project/users/user6/post4.jpg",
+                    "https://jungjung261.blob.core.windows.net/nextjs-project/users/user6/post5.jpg"
+                ],
+                "createddAt": "30/12/2022"
+            },
             "comment": [
                 {
                     "post_id": 7,

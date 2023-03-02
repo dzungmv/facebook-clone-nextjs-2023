@@ -31,7 +31,7 @@
         "id": 5,
         "icon": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/navigation/g.svg",
         "icon_active": "https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/navigation/g-a.svg",
-        "name": "Groups",
-        "url": "/groups"
+        "name": "Games",
+        "url": "/games"
     }
 ]

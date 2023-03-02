@@ -1,8 +1,9 @@
+import Pages from '@/components/package/pages';
+
 export default function Page() {
     return (
         <>
-            <h1>Page</h1>
-            <p>Page content</p>
+            <Pages />
         </>
     );
 }

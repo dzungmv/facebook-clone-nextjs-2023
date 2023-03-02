@@ -225,7 +225,18 @@ export default function Newfeed() {
                     </div>
                 </section>
 
-                {<Post data={data} />}
+                {data.users.map((item, index) => {
+                    return (
+                        <Post
+                            key={index}
+                            avatarImg={item.avatar}
+                            username={item.name}
+                            caption={item.post.caption}
+                            media={item.post.media}
+                            commentData={item.comments}
+                        />
+                    );
+                })}
             </div>
         </>
     );

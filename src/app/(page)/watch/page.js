@@ -1,8 +1,9 @@
+import WatchPage from '@/components/package/watch';
+
 export default function Page() {
     return (
         <>
-            <h1>Page</h1>
-            <p>Page content</p>
+            <WatchPage />
         </>
     );
 }

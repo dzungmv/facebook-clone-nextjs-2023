@@ -89,6 +89,17 @@
                 }
             }
 
+            .media-video {
+                width: 100%;
+                margin-top: 12px;
+
+                // margin: 0 -15px;
+
+                iframe {
+                    width: 100%;
+                }
+            }
+
             &-count {
                 display: flex;
                 align-items: center;
