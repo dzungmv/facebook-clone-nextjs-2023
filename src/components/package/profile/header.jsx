@@ -11,23 +11,25 @@ export default function ProfileHeader() {
 
     const pathname = usePathname();
 
+    console.log('path name', pathname);
+
     const action = [
-        { id: 1, name: 'Posts', url: '/' },
-        { id: 2, name: 'About', url: 'about' },
+        { id: 1, name: 'Posts', url: '' },
+        { id: 2, name: 'About', url: '/about' },
         {
             id: 3,
             name: 'Friends',
-            url: 'friends',
+            url: '/friends',
         },
         {
             id: 4,
             name: 'Photos',
-            url: 'photos',
+            url: '/photos',
         },
         {
             id: 5,
             name: 'Videos',
-            url: 'videos',
+            url: '/videos',
         },
     ];
 
@@ -113,16 +115,20 @@ export default function ProfileHeader() {
                     <div className='profile-header-action'>
                         <div className='profile-header-action-left'>
                             {action.map((item) => {
+                                console.log(
+                                    'check url',
+                                    `/profile/${item.url}` === pathname
+                                );
                                 return (
                                     <div
                                         key={item.id}
                                         className={
-                                            item.url === pathname
+                                            `/profile${item.url}` === pathname
                                                 ? 'profile-header-action-left-item tab-active'
                                                 : 'profile-header-action-left-item'
                                         }
                                         onClick={() =>
-                                            router.push(`/profile/${item.url}`)
+                                            router.push(`/profile${item.url}`)
                                         }>
                                         <div className='profile-header-action-left-item-child'>
                                             {item.name}
