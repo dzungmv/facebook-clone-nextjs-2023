@@ -26,7 +26,7 @@ export default function Gallery({ media }) {
                     if (media.length === 1) {
                         return (
                             <div
-                                onClick={() => handleClick(data, index)}
+                                // onClick={() => handleClick(data, index)}
                                 key={index}
                                 className='image__1'>
                                 <Image
@@ -42,7 +42,7 @@ export default function Gallery({ media }) {
                     } else if (media.length === 2) {
                         return (
                             <div
-                                onClick={() => handleClick(data, index)}
+                                // onClick={() => handleClick(data, index)}
                                 key={index}
                                 className='image__2'>
                                 <Image
@@ -59,7 +59,7 @@ export default function Gallery({ media }) {
                         return (
                             <div key={index} className='image__3'>
                                 <Image
-                                    onClick={() => handleClick(data, index)}
+                                    // onClick={() => handleClick(data, index)}
                                     src={data}
                                     alt='image'
                                     width='0'
@@ -72,7 +72,7 @@ export default function Gallery({ media }) {
                     } else if (index < 3) {
                         return (
                             <Image
-                                onClick={() => handleClick(data, index)}
+                                // onClick={() => handleClick(data, index)}
                                 key={index}
                                 src={data}
                                 alt='image'
@@ -85,7 +85,7 @@ export default function Gallery({ media }) {
                     } else if (index === 3) {
                         return (
                             <div
-                                onClick={() => handleClick(data, index)}
+                                // onClick={() => handleClick(data, index)}
                                 key={index}
                                 className='image__more'
                                 style={{

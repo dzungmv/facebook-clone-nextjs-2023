@@ -5,13 +5,12 @@ import Tippy from '@tippyjs/react';
 
 import styles from './profile.module.scss';
 import data from '@/components/data/data';
+import Link from 'next/link';
 
 export default function ProfileHeader() {
     // const router = useRouter();
 
     const pathname = usePathname();
-
-    console.log('path name', pathname);
 
     const action = [
         { id: 1, name: 'Posts', url: '' },
@@ -95,16 +94,12 @@ export default function ProfileHeader() {
                                 <div className='profile-header-info-right'>
                                     <div className='profile-header-info-right-action'>
                                         <div className='profile-header-info-right-action-btn'>
-                                            <button>
-                                                <i className='fa-solid fa-user-plus'></i>
-                                                <span>Add to Story</span>
-                                            </button>
+                                            <i className='fa-solid fa-user-plus'></i>
+                                            <span>Add to Story</span>
                                         </div>
                                         <div className='profile-header-info-right-action-btn'>
-                                            <button>
-                                                <i className='fa-solid fa-pen'></i>
-                                                <span>Edit profile</span>
-                                            </button>
+                                            <i className='fa-solid fa-pen'></i>
+                                            <span>Edit profile</span>
                                         </div>
                                     </div>
                                 </div>
@@ -115,27 +110,21 @@ export default function ProfileHeader() {
                     <div className='profile-header-action'>
                         <div className='profile-header-action-left'>
                             {action.map((item) => {
-                                console.log(
-                                    'check url',
-                                    `/profile/${item.url}` === pathname
-                                );
                                 return (
-                                    <div
+                                    <Link
+                                        href={`/profile${item.url}`}
                                         key={item.id}
                                         className={
                                             `/profile${item.url}` === pathname
                                                 ? 'profile-header-action-left-item tab-active'
                                                 : 'profile-header-action-left-item'
-                                        }
-                                        onClick={() =>
-                                            router.push(`/profile${item.url}`)
                                         }>
                                         <div className='profile-header-action-left-item-child'>
                                             {item.name}
                                         </div>
 
                                         <div className='line-active'></div>
-                                    </div>
+                                    </Link>
                                 );
                             })}
                             <div className='profile-header-action-left-item'>

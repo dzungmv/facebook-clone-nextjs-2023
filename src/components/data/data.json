@@ -7,16 +7,14 @@
             "title": "My Story",
             "media": "https://jungjung261.blob.core.windows.net/nextjs-project/user/story.jpg"
         },
-        "post": [
-            {
-                "post_id": 7,
-                "caption": "Monaliduck",
-                "media": [
-                    "https://jungjung261.blob.core.windows.net/nextjs-project/user/post.jpg"
-                ],
-                "createddAt": "30/12/2022"
-            }
-        ],
+        "post": {
+            "post_id": 7,
+            "caption": "Monaliduck",
+            "media": [
+                "https://jungjung261.blob.core.windows.net/nextjs-project/user/post.jpg"
+            ],
+            "createddAt": "30/12/2022"
+        },
         "comment": [
             {
                 "post_id": 1,

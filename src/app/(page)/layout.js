@@ -4,7 +4,7 @@ export default function DashboardLayout({ children }) {
     return (
         <>
             <Header />
-            <div>{children}</div>
+            <section>{children}</section>
         </>
     );
 }

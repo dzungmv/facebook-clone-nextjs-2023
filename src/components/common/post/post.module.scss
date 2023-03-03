@@ -345,4 +345,12 @@
             }
         }
     }
+
+    @media screen and (max-width: 600px) {
+        :global .post {
+            &-item {
+                border-radius: 0 !important;
+            }
+        }
+    }
 }

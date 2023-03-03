@@ -183,7 +183,6 @@ export default function Pages() {
                     className='toggle-bar'
                     onClick={() => {
                         pageLeftRef?.current?.classList.add('active');
-                        console.log('checkc');
                     }}>
                     <i className='fa-solid fa-bars'></i>
                 </div>
