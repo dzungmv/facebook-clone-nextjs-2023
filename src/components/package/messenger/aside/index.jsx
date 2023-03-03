@@ -3,14 +3,19 @@
 import data from '@/components/data/data';
 import Tippy from '@tippyjs/react';
 import Link from 'next/link';
+import { useSelector } from 'react-redux';
 
 import styles from '../messenger.module.scss';
 
-const AsideMessenger = ({ messID, pathname }) => {
+const AsideMessenger = () => {
+    const messID = useSelector((state) => state.messID.value);
+
+    console.log(typeof messID);
+
     return (
         <aside className={styles.wrapperAsideMessenger}>
             <div className='container__left--header'>
-                <span>Chats {pathname}</span>
+                <span>Chats </span>
 
                 <div className='action'>
                     <div className='action-item'>
@@ -44,13 +49,12 @@ const AsideMessenger = ({ messID, pathname }) => {
                 {data.users
                     .filter((item) => item.id !== 1)
                     .map((item, index) => {
-                        console.log(item.id, messID);
                         return (
                             <Link
                                 href={`/messenger/${item.id}`}
                                 key={index}
                                 className={
-                                    messID === item.id
+                                    Number(messID) === item.id
                                         ? 'messenger__item messenger__item-active'
                                         : 'messenger__item'
                                 }>

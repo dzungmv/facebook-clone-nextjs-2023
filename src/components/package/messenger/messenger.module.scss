@@ -374,7 +374,7 @@
             display: flex;
             align-items: center;
             position: relative;
-            padding: 8px;
+            padding: 5px 8px;
             border-radius: 8px;
 
             @media screen and (max-width: 1023px) {
@@ -467,7 +467,7 @@
             }
 
             &-active {
-                background-color: red;
+                background-color: var.$btn_bg;
             }
         }
     }

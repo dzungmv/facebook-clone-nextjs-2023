@@ -93,11 +93,16 @@ const Header = () => {
                         arrow={false}
                         delay={[500, 0]}
                         theme='light'>
-                        <div
+                        <Link
+                            href={'/messenger'}
                             className='header-right-item'
-                            onClick={() => router.push('/messenger')}>
+                            style={
+                                pathname.includes('messenger')
+                                    ? { display: 'none' }
+                                    : {}
+                            }>
                             <i className='fa-brands fa-facebook-messenger'></i>
-                        </div>
+                        </Link>
                     </Tippy>
 
                     <Tippy
