@@ -1,14 +1,15 @@
 'use client';
 
-import data from '@/components/data/data';
 import Tippy from '@tippyjs/react';
+import Image from 'next/image';
 import Link from 'next/link';
-import { useSelector } from 'react-redux';
+import { usePathname } from 'next/navigation';
 
+import data from '@/components/data/data';
 import styles from '../messenger.module.scss';
 
 const AsideMessenger = () => {
-    const messID = useSelector((state) => state.messID.value);
+    const pathname = usePathname();
 
     console.log(typeof messID);
 
@@ -54,12 +55,19 @@ const AsideMessenger = () => {
                                 href={`/messenger/${item.id}`}
                                 key={index}
                                 className={
-                                    Number(messID) === item.id
+                                    pathname === `/messenger/${item.id}`
                                         ? 'messenger__item messenger__item-active'
                                         : 'messenger__item'
                                 }>
                                 <div className='messenger__item--avatar'>
-                                    <img src={item.avatar} />
+                                    <Image
+                                        src={item.avatar}
+                                        alt='image'
+                                        width='0'
+                                        height='0'
+                                        sizes='100vw'
+                                        fill={false}
+                                    />
                                 </div>
                                 <div className='messenger__item--content'>
                                     <div className='info'>

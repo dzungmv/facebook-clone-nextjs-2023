@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 import data from '@/components/data/data';
 import styles from '../profile.module.scss';
+import Image from 'next/image';
 
 const filter = ['Your Photos', 'Albums'];
 
@@ -58,7 +59,14 @@ const YourPhoto = ({ data }) => {
     return (
         <div className={styles.wrapperYourPhoto}>
             <div className='your-photo-item'>
-                <img src={data.user.avatar} alt='' loading='lazy' />
+                <Image
+                    src={data.user.avatar}
+                    alt='image'
+                    width='0'
+                    height='0'
+                    sizes='100vw'
+                    fill={false}
+                />
                 <div className='your-photo-item-edit'>
                     <i className='fa-solid fa-pen'></i>
                 </div>

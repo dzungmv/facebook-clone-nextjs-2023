@@ -35,45 +35,47 @@ const Header = () => {
                     <Search />
                 </div>
                 <div className='header-center'>
-                    {header_ui.map((item) => (
-                        <Tippy
-                            key={item.id}
-                            content={item.name}
-                            theme='light'
-                            delay={[500, 0]}>
-                            <Link
-                                href={item.url}
-                                className={
-                                    item.url === pathname
-                                        ? 'header-center-item tab-active'
-                                        : 'header-center-item'
-                                }>
-                                <div className='header-center-item-child'>
-                                    <Image
-                                        className='header-center-item-child-main_img'
-                                        src={item.icon}
-                                        alt='header-icon'
-                                        width='0'
-                                        height='0'
-                                        fill={false}
-                                        sizes='100vw'
-                                        priority={true}
-                                    />
-                                    <Image
-                                        className='header-center-item-child-active_img'
-                                        src={item.icon_active}
-                                        alt=''
-                                        width='0'
-                                        height='0'
-                                        fill={false}
-                                        sizes='100vw'
-                                        priority={true}
-                                    />
-                                </div>
-                                <div className='line-active'></div>
-                            </Link>
-                        </Tippy>
-                    ))}
+                    {header_ui.map((item) => {
+                        return (
+                            <Tippy
+                                key={item.id}
+                                content={item.name}
+                                theme='light'
+                                delay={[500, 0]}>
+                                <Link
+                                    href={item.url}
+                                    className={
+                                        item.url === pathname
+                                            ? 'header-center-item tab-active'
+                                            : 'header-center-item'
+                                    }>
+                                    <div className='header-center-item-child'>
+                                        <Image
+                                            className='header-center-item-child-main_img'
+                                            src={item.icon}
+                                            alt='header-icon'
+                                            width='0'
+                                            height='0'
+                                            fill={false}
+                                            sizes='100vw'
+                                            priority={true}
+                                        />
+                                        <Image
+                                            className='header-center-item-child-active_img'
+                                            src={item.icon_active}
+                                            alt=''
+                                            width='0'
+                                            height='0'
+                                            fill={false}
+                                            sizes='100vw'
+                                            priority={true}
+                                        />
+                                    </div>
+                                    <div className='line-active'></div>
+                                </Link>
+                            </Tippy>
+                        );
+                    })}
                 </div>
                 <div className='header-right'>
                     <Tippy

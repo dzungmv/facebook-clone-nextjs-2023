@@ -2,12 +2,8 @@
 
 import { configureStore } from '@reduxjs/toolkit';
 
-import messIDSlice from './features/messenger/messIDSlice';
-
 const store = configureStore({
-    reducer: {
-        messID: messIDSlice,
-    },
+    reducer: {},
 });
 
 export default store;

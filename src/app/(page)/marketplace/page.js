@@ -1,8 +1,9 @@
+import MarketBrowsePage from '@/components/package/marketplace/browse';
+
 export default function Page() {
     return (
         <>
-            <h1>Page</h1>
-            <p>Page content</p>
+            <MarketBrowsePage />
         </>
     );
 }

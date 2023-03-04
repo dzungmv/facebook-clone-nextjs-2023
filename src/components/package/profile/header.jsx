@@ -6,6 +6,7 @@ import Tippy from '@tippyjs/react';
 import styles from './profile.module.scss';
 import data from '@/components/data/data';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ProfileHeader() {
     // const router = useRouter();
@@ -37,7 +38,14 @@ export default function ProfileHeader() {
             <section className='profile-header'>
                 <div className='profile-header-container'>
                     <div className='profile-header-cover'>
-                        <img src='' alt='' loading='lazy' />
+                        <Image
+                            src=''
+                            alt='image'
+                            width='0'
+                            height='0'
+                            sizes='100vw'
+                            fill={false}
+                        />
                         <div className='profile-header-cover-add'>
                             <i className='fa-duotone fa-camera'></i>
                             <span>Add Cover Photo</span>
@@ -47,10 +55,13 @@ export default function ProfileHeader() {
                     <div className='profile-header-info'>
                         <div className='profile-header-info-left'>
                             <div className='profile-header-info-left-avatar'>
-                                <img
+                                <Image
                                     src={data.user.avatar}
-                                    alt=''
-                                    loading='lazy'
+                                    alt='image'
+                                    width='0'
+                                    height='0'
+                                    sizes='100vw'
+                                    fill={false}
                                 />
                             </div>
                             <div className='profile-header-info-i'>
@@ -67,12 +78,16 @@ export default function ProfileHeader() {
                                                 ? data?.users?.map(
                                                       (data, index) => {
                                                           return index < 5 ? (
-                                                              <img
+                                                              <Image
                                                                   key={data.id}
                                                                   src={
                                                                       data.avatar
                                                                   }
-                                                                  alt='game'
+                                                                  alt='image'
+                                                                  width='0'
+                                                                  height='0'
+                                                                  sizes='100vw'
+                                                                  fill={false}
                                                               />
                                                           ) : index === 5 ? (
                                                               <div

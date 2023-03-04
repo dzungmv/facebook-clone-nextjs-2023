@@ -4,6 +4,7 @@
 import { useState } from 'react';
 import styles from '../profile.module.scss';
 import data from '@/components/data/data';
+import Image from 'next/image';
 
 const filter_items = [
     'All friends',
@@ -86,7 +87,14 @@ const AllFreinds = ({ data }) => {
                     <div key={item.id} className='friend-item'>
                         <div className='friend-item-left'>
                             <div className='friend-item-left-avatar'>
-                                <img src={item.avatar} alt='' />
+                                <Image
+                                    src={item.avatar}
+                                    alt='image'
+                                    width='0'
+                                    height='0'
+                                    sizes='100vw'
+                                    fill={false}
+                                />
                             </div>
                             <div className='friend-item-left-name'>
                                 {item.name}
@@ -203,7 +211,14 @@ const Followers = ({ data }) => {
                     <div key={item.id} className='friend-item'>
                         <div className='friend-item-left'>
                             <div className='friend-item-left-avatar'>
-                                <img src={item.avatar} alt='' loading='lazy' />
+                                <Image
+                                    src={item.avatar}
+                                    alt='image'
+                                    width='0'
+                                    height='0'
+                                    sizes='100vw'
+                                    fill={false}
+                                />
                             </div>
                             <div className='friend-item-left-name'>
                                 {item.name}
@@ -230,7 +245,14 @@ const Following = ({ data }) => {
                     <div key={item.id} className='friend-item'>
                         <div className='friend-item-left'>
                             <div className='friend-item-left-avatar'>
-                                <img src={item.avatar} alt='' loading='lazy' />
+                                <Image
+                                    src={item.avatar}
+                                    alt='image'
+                                    width='0'
+                                    height='0'
+                                    sizes='100vw'
+                                    fill={false}
+                                />
                             </div>
                             <div className='friend-item-left-name'>
                                 {item.name}

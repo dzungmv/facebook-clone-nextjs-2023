@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 import styles from '../messenger.module.scss';
@@ -18,7 +19,14 @@ const Chat = ({ data }) => {
             <div className='container__right--header'>
                 <div className='user'>
                     <div className='user__avatar'>
-                        <img src={data.avatar} />
+                        <Image
+                            src={data.avatar}
+                            alt='image'
+                            width='0'
+                            height='0'
+                            sizes='100vw'
+                            fill={false}
+                        />
                     </div>
                     <div className='user__name'>{data.name}</div>
                 </div>
@@ -37,7 +45,14 @@ const Chat = ({ data }) => {
             <div className='messenger__container'>
                 <div className='messenger__container--heading'>
                     <div className='avatar'>
-                        <img src={data.avatar} />
+                        <Image
+                            src={data.avatar}
+                            alt='image'
+                            width='0'
+                            height='0'
+                            sizes='100vw'
+                            fill={false}
+                        />
                     </div>
                     <div className='name'>{data.name}</div>
                     <div className='des'>You're friends on Facebook</div>

@@ -3,6 +3,7 @@ import styles from '../profile.module.scss';
 import data from '@/components/data/data';
 import Link from 'next/link';
 import Post from '@/components/common/post';
+import Image from 'next/image';
 
 export default function ProfilePost() {
     // const dispatch = useDispatch();
@@ -77,10 +78,13 @@ export default function ProfilePost() {
                     <div className='post-right-create_post box'>
                         <div className='post-right-create_post-content'>
                             <div className='post-right-create_post-content-avatar'>
-                                <img
+                                <Image
                                     src={data.user.avatar}
-                                    alt=''
-                                    loading='lazy'
+                                    alt='image'
+                                    width='0'
+                                    height='0'
+                                    sizes='100vw'
+                                    fill={false}
                                 />
                             </div>
                             <div className='post-right-create_post-content-input'>
@@ -93,9 +97,13 @@ export default function ProfilePost() {
                         <div className='post-right-create_post-footer'>
                             <div className='post-right-create_post-footer-item'>
                                 <div className='post-right-create_post-footer-item-icon'>
-                                    <img
+                                    <Image
                                         src='https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/create-post/live-video.svg'
-                                        alt=''
+                                        alt='image'
+                                        width='0'
+                                        height='0'
+                                        sizes='100vw'
+                                        fill={false}
                                     />
                                 </div>
                                 <div className='post-right-create_post-footer-item-name'>
@@ -104,9 +112,13 @@ export default function ProfilePost() {
                             </div>
                             <div className='post-right-create_post-footer-item'>
                                 <div className='post-right-create_post-footer-item-icon'>
-                                    <img
+                                    <Image
                                         src='https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/create-post/photo-video.svg'
-                                        alt=''
+                                        alt='image'
+                                        width='0'
+                                        height='0'
+                                        sizes='100vw'
+                                        fill={false}
                                     />
                                 </div>
                                 <div className='post-right-create_post-footer-item-name'>
@@ -115,9 +127,13 @@ export default function ProfilePost() {
                             </div>
                             <div className='post-right-create_post-footer-item'>
                                 <div className='post-right-create_post-footer-item-icon'>
-                                    <img
+                                    <Image
                                         src='https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/create-post/emoiji.svg'
-                                        alt=''
+                                        alt='image'
+                                        width='0'
+                                        height='0'
+                                        sizes='100vw'
+                                        fill={false}
                                     />
                                 </div>
                                 <div className='post-right-create_post-footer-item-name'>
