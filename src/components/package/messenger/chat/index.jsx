@@ -55,7 +55,7 @@ const Chat = ({ data }) => {
                         />
                     </figure>
                     <div className='name'>{data.name}</div>
-                    <p className='des'>You're friends on Facebook</p>
+                    <p className='des'>You&apos;re friends on Facebook</p>
                 </section>
             </section>
             <section className='container__right--footer'>

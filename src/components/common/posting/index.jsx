@@ -16,7 +16,9 @@ const Posting = ({ data }) => {
                     />
                 </figure>
                 <div className='create-post-content-input'>
-                    <span className=''>What's on your mind, Minh Dzung?</span>
+                    <span className=''>
+                        What&apos;s on your mind, Minh Dzung?
+                    </span>
                 </div>
             </section>
 

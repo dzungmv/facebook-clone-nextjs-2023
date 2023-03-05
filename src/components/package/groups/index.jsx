@@ -28,7 +28,7 @@ const GroupDiscussion = () => {
                     <p className='about-des'>
                         Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s
+                        industry&apos;s standard dummy text ever since the 1500s
                     </p>
 
                     <section className='about-privacy-item'>
@@ -36,8 +36,8 @@ const GroupDiscussion = () => {
                         <section className='privacy'>
                             <h4>Public</h4>
                             <p>
-                                Anyone can see who's in the group and what they
-                                post. .
+                                Anyone can see who&apos;s in the group and what
+                                they post.
                             </p>
                         </section>
                     </section>
