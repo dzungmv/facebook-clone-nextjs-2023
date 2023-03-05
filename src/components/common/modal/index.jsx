@@ -1,7 +1,7 @@
 'use client';
 import { useRef, useCallback, useEffect } from 'react';
 
-import styles from './Modal.module.scss';
+import styles from './modal.module.scss';
 
 function Modal({ title, children, show, close, size, notCloseOutside }) {
     const modalRef = useRef();
