@@ -2,12 +2,22 @@
 
 .wrapperPages {
     display: flex;
-    // overflow: hidden !important;
-    // max-height: 100vh;
 
-    :global .pages-left {
+    :global .page-left {
         width: 25%;
+    }
 
+    :global .page-right {
+        width: 75%;
+        padding-top: 68px;
+        padding-bottom: 16px;
+    }
+}
+
+.wrapperSidebar {
+    width: inherit;
+    :global .sidebar-wrapper {
+        width: inherit;
         &-container {
             width: inherit;
             min-height: 100vh;
@@ -23,7 +33,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 8px;
 
             &-title {
                 font-size: 24px;
@@ -72,7 +81,7 @@
                 gap: 0 8px;
                 padding: 8px;
                 border-radius: 8px;
-                font-size: 16px;
+                font-size: 14px;
                 font-weight: 500;
                 margin-bottom: 8px;
 
@@ -222,39 +231,6 @@
             font-size: 24px;
             padding-left: 8px;
             display: none;
-        }
-    }
-
-    :global .pages-right {
-        width: 75%;
-        padding-top: 68px;
-        overflow: auto;
-        padding-bottom: 16px;
-    }
-
-    @media screen and (max-width: 1023px) {
-        :global .pages-left {
-            width: auto;
-            &-container {
-                display: none;
-            }
-
-            .active {
-                display: block;
-            }
-
-            .toggle-bar {
-                display: block;
-
-                &:active {
-                    color: var.$color_primary;
-                }
-            }
-        }
-
-        :global .pages-right {
-            width: auto;
-            flex: 1;
         }
     }
 }
@@ -664,12 +640,12 @@
                 font-weight: 600;
                 line-height: calc(18 / 14);
             }
+        }
 
-            &:nth-child(3) {
-                font-size: 14px;
-                line-height: calc(16 / 14);
-                margin-top: -2px !important;
-            }
+        p {
+            font-size: 14px;
+            line-height: calc(16 / 14);
+            margin-top: -2px !important;
         }
     }
 

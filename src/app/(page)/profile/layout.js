@@ -1,16 +1,13 @@
 import ProfileHeader from '@/components/package/profile/header';
+import styles from '@/components/package/profile/profile.module.scss';
 
 export default function DashboardLayout({ children }) {
     return (
-        <>
+        <main>
             <ProfileHeader />
-            <div
-                style={{
-                    maxWidth: '1100px;',
-                    margin: '0 auto',
-                }}>
+            <section className={styles.wrapperProfileContent}>
                 {children}
-            </div>
-        </>
+            </section>
+        </main>
     );
 }

@@ -1,9 +1,9 @@
-import Pages from '@/components/package/pages';
+import YourPagesAndProfile from '@/components/package/pages/yourspage';
 
 export default function Page() {
     return (
         <>
-            <Pages />
+            <YourPagesAndProfile />
         </>
     );
 }

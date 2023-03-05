@@ -1,8 +1,6 @@
-import Messenger from '@/components/package/messenger';
-
 export default function Page() {
     return (
-        <div
+        <section
             style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -14,6 +12,6 @@ export default function Page() {
                 color: '#65676b',
             }}>
             Select a chat or start a new conversation
-        </div>
+        </section>
     );
 }

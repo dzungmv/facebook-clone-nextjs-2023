@@ -7,7 +7,7 @@ const Search = () => {
     const [seachValue, setSearchValue] = useState('');
 
     return (
-        <div className='header-left-search'>
+        <section className='header-left-search'>
             <i className='fa-regular fa-magnifying-glass search-icon'></i>
             <input
                 className='search-input'
@@ -17,7 +17,7 @@ const Search = () => {
                     setSearchValue(e.target.value);
                 }}
             />
-        </div>
+        </section>
     );
 };
 

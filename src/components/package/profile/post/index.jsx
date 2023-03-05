@@ -4,6 +4,7 @@ import data from '@/components/data/data';
 import Link from 'next/link';
 import Post from '@/components/common/post';
 import Image from 'next/image';
+import Posting from '@/components/common/posting';
 
 export default function ProfilePost() {
     // const dispatch = useDispatch();
@@ -22,148 +23,82 @@ export default function ProfilePost() {
                     <CreatePostModal />
                 </Modal>
             )} */}
-            <div className={styles.wrapperPost}>
-                <div className='post-left'>
-                    <div className='post-left-intro box'>
-                        <div className='box-title'>Intro</div>
-                        <div className='post-left-intro-bio'>
+            <section className={styles.wrapperPost}>
+                <section className='post-left'>
+                    <section className='post-left-intro box'>
+                        <h4 className='box-title'>Intro</h4>
+                        <section className='post-left-intro-bio'>
                             <span className='post-left-intro-bio-content'>
                                 ✈️
                             </span>
                             <div className='post-left-intro-bio-edit'>
                                 <button>Edit bio</button>
                             </div>
-                        </div>
-                        <div className='post-left-intro-detail'>
-                            <div className='post-left-intro-detail-item'>
+                        </section>
+                        <section className='post-left-intro-detail'>
+                            <section className='post-left-intro-detail-item'>
                                 <div className='post-left-intro-detail-item-icon'>
                                     <i className='fa-solid fa-heart'></i>
                                 </div>
-                                <div className='post-left-intro-detail-item-name'>
+                                <span className='post-left-intro-detail-item-name'>
                                     Single
-                                </div>
-                            </div>
-                            <div className='post-left-intro-detail-item'>
+                                </span>
+                            </section>
+                            <section className='post-left-intro-detail-item'>
                                 <div className='post-left-intro-detail-item-icon'>
                                     <i className='fa-brands fa-github'></i>
                                 </div>
                                 <div className='post-left-intro-detail-item-name'>
                                     <Link href=''>jungjung261</Link>
                                 </div>
-                            </div>
-                            <div className='post-left-intro-detail-item'>
+                            </section>
+                            <section className='post-left-intro-detail-item'>
                                 <div className='post-left-intro-detail-item-icon'>
                                     <i className='fa-brands fa-linkedin'></i>
                                 </div>
                                 <div className='post-left-intro-detail-item-name'>
                                     <Link href=''>jungjung261</Link>
                                 </div>
-                            </div>
-                            <div className='post-left-intro-detail-item'>
+                            </section>
+                            <section className='post-left-intro-detail-item'>
                                 <div className='post-left-intro-detail-item-icon'>
                                     <i className='fa-brands fa-tiktok'></i>
                                 </div>
                                 <div className='post-left-intro-detail-item-name'>
                                     <Link href=''>jungjung261</Link>
                                 </div>
-                            </div>
+                            </section>
 
                             <div className='post-left-intro-detail-edit'>
                                 <button>Edit details</button>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='post-right'>
-                    <div className='post-right-create_post box'>
-                        <div className='post-right-create_post-content'>
-                            <div className='post-right-create_post-content-avatar'>
-                                <Image
-                                    src={data.user.avatar}
-                                    alt='image'
-                                    width='0'
-                                    height='0'
-                                    sizes='100vw'
-                                    fill={false}
-                                />
-                            </div>
-                            <div className='post-right-create_post-content-input'>
-                                <span className=''>
-                                    What's on your mind, Minh Dzung?
-                                </span>
-                            </div>
-                        </div>
+                        </section>
+                    </section>
+                </section>
+                <section className='post-right'>
+                    <Posting data={data.user} />
 
-                        <div className='post-right-create_post-footer'>
-                            <div className='post-right-create_post-footer-item'>
-                                <div className='post-right-create_post-footer-item-icon'>
-                                    <Image
-                                        src='https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/create-post/live-video.svg'
-                                        alt='image'
-                                        width='0'
-                                        height='0'
-                                        sizes='100vw'
-                                        fill={false}
-                                    />
-                                </div>
-                                <div className='post-right-create_post-footer-item-name'>
-                                    Live videos
-                                </div>
-                            </div>
-                            <div className='post-right-create_post-footer-item'>
-                                <div className='post-right-create_post-footer-item-icon'>
-                                    <Image
-                                        src='https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/create-post/photo-video.svg'
-                                        alt='image'
-                                        width='0'
-                                        height='0'
-                                        sizes='100vw'
-                                        fill={false}
-                                    />
-                                </div>
-                                <div className='post-right-create_post-footer-item-name'>
-                                    Photo/video
-                                </div>
-                            </div>
-                            <div className='post-right-create_post-footer-item'>
-                                <div className='post-right-create_post-footer-item-icon'>
-                                    <Image
-                                        src='https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/create-post/emoiji.svg'
-                                        alt='image'
-                                        width='0'
-                                        height='0'
-                                        sizes='100vw'
-                                        fill={false}
-                                    />
-                                </div>
-                                <div className='post-right-create_post-footer-item-name'>
-                                    Feeling/activity
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='post-right-manage box'>
-                        <div className='box-title'>Posts</div>
-                        <div className='post-right-manage-content'>
-                            <div className='post-right-manage-content-item'>
+                    <section className='post-right-manage box'>
+                        <h4 className='box-title'>Posts</h4>
+                        <section className='post-right-manage-content'>
+                            <section className='post-right-manage-content-item'>
                                 <div className='post-right-manage-content-icon'>
                                     <i className='fa-solid fa-sliders-simple'></i>
                                 </div>
-                                <div className='post-right-manage-content-name'>
+                                <span className='post-right-manage-content-name'>
                                     Filters
-                                </div>
-                            </div>
-                            <div className='post-right-manage-content-item'>
+                                </span>
+                            </section>
+                            <section className='post-right-manage-content-item'>
                                 <div className='post-right-manage-content-icon'>
                                     <i className='fa-solid fa-gear'></i>
                                 </div>
-                                <div className='post-right-manage-content-name'>
+                                <span className='post-right-manage-content-name'>
                                     Manage posts
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                </span>
+                            </section>
+                        </section>
+                    </section>
 
                     <section className='post'>
                         {
@@ -176,8 +111,8 @@ export default function ProfilePost() {
                             />
                         }
                     </section>
-                </div>
-            </div>
+                </section>
+            </section>
         </>
     );
 }

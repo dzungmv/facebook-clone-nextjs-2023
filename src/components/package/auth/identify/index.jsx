@@ -8,9 +8,9 @@ import styles from './identify.module.scss';
 const ForgotPassPage = () => {
     const router = useRouter();
     return (
-        <section className={styles.wrapperForgotPass}>
+        <main className={styles.wrapperForgotPass}>
             <header className='header'>
-                <div className='header-left'>
+                <figure className='header-left'>
                     <Image
                         src='https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/facebook-logo-text.svg'
                         alt='Facebook'
@@ -19,8 +19,8 @@ const ForgotPassPage = () => {
                         fill={false}
                         sizes='100vw'
                     />
-                </div>
-                <div className='header-right'>
+                </figure>
+                <section className='header-right'>
                     <div className='form-control'>
                         <input type='text' placeholder='Email or phone' />
                     </div>
@@ -31,17 +31,17 @@ const ForgotPassPage = () => {
                     <div className='form-btn'>
                         <button onClick={() => router.push('/')}>Login</button>
                     </div>
-                </div>
+                </section>
             </header>
-            <main className='body'>
+            <section className='body'>
                 <header>Find Your Account</header>
                 <hr />
 
-                <div className='content'>
-                    <div className='content-desc'>
+                <section className='content'>
+                    <p className='content-desc'>
                         Please enter your email address or mobile number to
                         search for your account.
-                    </div>
+                    </p>
 
                     <div className='form-control'>
                         <input
@@ -49,22 +49,22 @@ const ForgotPassPage = () => {
                             placeholder='Email address or mobile number'
                         />
                     </div>
-                </div>
+                </section>
 
                 <hr />
 
                 <footer>
-                    <div className='form-btn'>
+                    <section className='form-btn'>
                         <button onClick={() => router.push('/auth/login')}>
                             Cancel
                         </button>
                         <button onClick={() => router.push('/login')}>
                             Search
                         </button>
-                    </div>
+                    </section>
                 </footer>
-            </main>
-        </section>
+            </section>
+        </main>
     );
 };
 

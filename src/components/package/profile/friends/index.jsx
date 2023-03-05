@@ -20,16 +20,16 @@ const filter_items = [
 export default function Friends() {
     const [tab, setTab] = useState(filter_items[0]);
     return (
-        <div className={styles.wrapperFriends}>
-            <div className='friends-header'>
-                <div className='friends-header-wrapper'>
-                    <div className='friends-header-title'>Friends</div>
-                    <div className='friends-header-action'>
-                        <div className='friends-header-action-search'>
+        <section className={styles.wrapperFriends}>
+            <section className='friends-header'>
+                <section className='friends-header-wrapper'>
+                    <h4 className='friends-header-title'>Friends</h4>
+                    <header className='friends-header-action'>
+                        <section className='friends-header-action-search'>
                             <i className='fa-solid fa-search'></i>
                             <input type='text' placeholder='Search' />
-                        </div>
-                        <div className='action-content'>
+                        </section>
+                        <section className='action-content'>
                             <div className='friends-header-action-s'>
                                 <span>Find requests</span>
                             </div>
@@ -41,13 +41,13 @@ export default function Friends() {
                             <div className='friends-header-action-b'>
                                 <i className='fa-solid fa-ellipsis'></i>
                             </div>
-                        </div>
-                    </div>
-                </div>
+                        </section>
+                    </header>
+                </section>
 
-                <div className='friends-header-filter'>
+                <section className='friends-header-filter'>
                     {filter_items.map((item, index) => (
-                        <div
+                        <section
                             key={index}
                             className={
                                 item === tab
@@ -60,12 +60,12 @@ export default function Friends() {
                             </div>
 
                             <div className='active-line'></div>
-                        </div>
+                        </section>
                     ))}
-                </div>
-            </div>
+                </section>
+            </section>
 
-            <div className='friends-content'>
+            <section className='friends-content'>
                 {tab === 'All friends' && <AllFreinds data={data} />}
                 {tab === 'Recently added' && <RecentlyAdded data={data} />}
                 {tab === 'Birthday' && <Birthday data={data} />}
@@ -74,19 +74,19 @@ export default function Friends() {
                 {tab === 'Home Town' && <HomeTown data={data} />}
                 {tab === 'Followers' && <Followers data={data} />}
                 {tab === 'Following' && <Following data={data} />}
-            </div>
-        </div>
+            </section>
+        </section>
     );
 }
 
 const AllFreinds = ({ data }) => {
     return (
-        <div className={styles.wrapperAllFriends}>
+        <section className={styles.wrapperAllFriends}>
             {data.users.map((item) => {
                 return (
-                    <div key={item.id} className='friend-item'>
-                        <div className='friend-item-left'>
-                            <div className='friend-item-left-avatar'>
+                    <section key={item.id} className='friend-item'>
+                        <section className='friend-item-left'>
+                            <figure className='friend-item-left-avatar'>
                                 <Image
                                     src={item.avatar}
                                     alt='image'
@@ -95,27 +95,27 @@ const AllFreinds = ({ data }) => {
                                     sizes='100vw'
                                     fill={false}
                                 />
-                            </div>
+                            </figure>
                             <div className='friend-item-left-name'>
                                 {item.name}
                             </div>
-                        </div>
+                        </section>
 
-                        <div className='friend-item-right'>
+                        <section className='friend-item-right'>
                             <div className='friend-item-right-action'>
                                 <i className='fa-solid fa-ellipsis'></i>
                             </div>
-                        </div>
-                    </div>
+                        </section>
+                    </section>
                 );
             })}
-        </div>
+        </section>
     );
 };
 
 const RecentlyAdded = () => {
     return (
-        <div
+        <section
             style={{
                 minHeight: '300px',
                 display: 'flex',
@@ -127,13 +127,13 @@ const RecentlyAdded = () => {
                 color: 'rgba(0,0,0,0.5)',
             }}>
             Comming soon!
-        </div>
+        </section>
     );
 };
 
 const Birthday = () => {
     return (
-        <div
+        <section
             style={{
                 minHeight: '300px',
                 display: 'flex',
@@ -145,13 +145,13 @@ const Birthday = () => {
                 color: 'rgba(0,0,0,0.5)',
             }}>
             Comming soon!
-        </div>
+        </section>
     );
 };
 
 const University = () => {
     return (
-        <div
+        <section
             style={{
                 minHeight: '300px',
                 display: 'flex',
@@ -163,13 +163,13 @@ const University = () => {
                 color: 'rgba(0,0,0,0.5)',
             }}>
             Comming soon!
-        </div>
+        </section>
     );
 };
 
 const CurrentCity = () => {
     return (
-        <div
+        <section
             style={{
                 minHeight: '300px',
                 display: 'flex',
@@ -181,13 +181,13 @@ const CurrentCity = () => {
                 color: 'rgba(0,0,0,0.5)',
             }}>
             Comming soon!
-        </div>
+        </section>
     );
 };
 
 const HomeTown = () => {
     return (
-        <div
+        <section
             style={{
                 minHeight: '300px',
                 display: 'flex',
@@ -199,18 +199,18 @@ const HomeTown = () => {
                 color: 'rgba(0,0,0,0.5)',
             }}>
             Comming soon!
-        </div>
+        </section>
     );
 };
 
 const Followers = ({ data }) => {
     return (
-        <div className={styles.wrapperAllFriends}>
+        <section className={styles.wrapperAllFriends}>
             {data.users.map((item) => {
                 return (
-                    <div key={item.id} className='friend-item'>
-                        <div className='friend-item-left'>
-                            <div className='friend-item-left-avatar'>
+                    <section key={item.id} className='friend-item'>
+                        <section className='friend-item-left'>
+                            <figure className='friend-item-left-avatar'>
                                 <Image
                                     src={item.avatar}
                                     alt='image'
@@ -219,32 +219,32 @@ const Followers = ({ data }) => {
                                     sizes='100vw'
                                     fill={false}
                                 />
-                            </div>
+                            </figure>
                             <div className='friend-item-left-name'>
                                 {item.name}
                             </div>
-                        </div>
+                        </section>
 
-                        <div className='friend-item-right'>
+                        <section className='friend-item-right'>
                             <div className='friend-item-right-action'>
                                 <i className='fa-solid fa-ellipsis'></i>
                             </div>
-                        </div>
-                    </div>
+                        </section>
+                    </section>
                 );
             })}
-        </div>
+        </section>
     );
 };
 
 const Following = ({ data }) => {
     return (
-        <div className={styles.wrapperAllFriends}>
+        <section className={styles.wrapperAllFriends}>
             {data.users.map((item) => {
                 return (
-                    <div key={item.id} className='friend-item'>
-                        <div className='friend-item-left'>
-                            <div className='friend-item-left-avatar'>
+                    <section key={item.id} className='friend-item'>
+                        <section className='friend-item-left'>
+                            <figure className='friend-item-left-avatar'>
                                 <Image
                                     src={item.avatar}
                                     alt='image'
@@ -253,20 +253,18 @@ const Following = ({ data }) => {
                                     sizes='100vw'
                                     fill={false}
                                 />
-                            </div>
-                            <div className='friend-item-left-name'>
-                                {item.name}
-                            </div>
-                        </div>
+                            </figure>
+                            <p className='friend-item-left-name'>{item.name}</p>
+                        </section>
 
-                        <div className='friend-item-right'>
+                        <section className='friend-item-right'>
                             <div className='friend-item-right-action'>
                                 <i className='fa-solid fa-ellipsis'></i>
                             </div>
-                        </div>
-                    </div>
+                        </section>
+                    </section>
                 );
             })}
-        </div>
+        </section>
     );
 };

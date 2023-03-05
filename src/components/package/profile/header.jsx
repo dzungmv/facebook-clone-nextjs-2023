@@ -34,10 +34,10 @@ export default function ProfileHeader() {
     ];
 
     return (
-        <div className={styles.wrapperProfile}>
-            <section className='profile-header'>
-                <div className='profile-header-container'>
-                    <div className='profile-header-cover'>
+        <section className={styles.wrapperProfile}>
+            <header className='profile-header'>
+                <section className='profile-header-container'>
+                    <figure className='profile-header-cover'>
                         <Image
                             src=''
                             alt='image'
@@ -46,15 +46,15 @@ export default function ProfileHeader() {
                             sizes='100vw'
                             fill={false}
                         />
-                        <div className='profile-header-cover-add'>
+                        <section className='profile-header-cover-add'>
                             <i className='fa-duotone fa-camera'></i>
                             <span>Add Cover Photo</span>
-                        </div>
-                    </div>
+                        </section>
+                    </figure>
 
-                    <div className='profile-header-info'>
-                        <div className='profile-header-info-left'>
-                            <div className='profile-header-info-left-avatar'>
+                    <section className='profile-header-info'>
+                        <section className='profile-header-info-left'>
+                            <figure className='profile-header-info-left-avatar'>
                                 <Image
                                     src={data.user.avatar}
                                     alt='image'
@@ -63,17 +63,17 @@ export default function ProfileHeader() {
                                     sizes='100vw'
                                     fill={false}
                                 />
-                            </div>
-                            <div className='profile-header-info-i'>
-                                <div>
-                                    <div className='profile-header-info-i-name'>
+                            </figure>
+                            <section className='profile-header-info-i'>
+                                <section>
+                                    <h4 className='profile-header-info-i-name'>
                                         {data.user.name}
-                                    </div>
-                                    <div className='profile-header-info-i-friends'>
+                                    </h4>
+                                    <span className='profile-header-info-i-friends'>
                                         <span>Friends</span>
-                                    </div>
-                                    <div className='profile-header-info-i-list'>
-                                        <div className='friend-list'>
+                                    </span>
+                                    <section className='profile-header-info-i-list'>
+                                        <section className='friend-list'>
                                             {data.users && data.users.length > 0
                                                 ? data?.users?.map(
                                                       (data, index) => {
@@ -102,28 +102,28 @@ export default function ProfileHeader() {
                                                       }
                                                   )
                                                 : null}
-                                        </div>
-                                    </div>
-                                </div>
+                                        </section>
+                                    </section>
+                                </section>
 
-                                <div className='profile-header-info-right'>
-                                    <div className='profile-header-info-right-action'>
-                                        <div className='profile-header-info-right-action-btn'>
+                                <section className='profile-header-info-right'>
+                                    <section className='profile-header-info-right-action'>
+                                        <section className='profile-header-info-right-action-btn'>
                                             <i className='fa-solid fa-user-plus'></i>
                                             <span>Add to Story</span>
-                                        </div>
-                                        <div className='profile-header-info-right-action-btn'>
+                                        </section>
+                                        <section className='profile-header-info-right-action-btn'>
                                             <i className='fa-solid fa-pen'></i>
                                             <span>Edit profile</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                        </section>
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
 
-                    <div className='profile-header-action'>
-                        <div className='profile-header-action-left'>
+                    <section className='profile-header-action'>
+                        <section className='profile-header-action-left'>
                             {action.map((item) => {
                                 return (
                                     <Link
@@ -134,9 +134,9 @@ export default function ProfileHeader() {
                                                 ? 'profile-header-action-left-item tab-active'
                                                 : 'profile-header-action-left-item'
                                         }>
-                                        <div className='profile-header-action-left-item-child'>
+                                        <p className='profile-header-action-left-item-child'>
                                             {item.name}
-                                        </div>
+                                        </p>
 
                                         <div className='line-active'></div>
                                     </Link>
@@ -156,15 +156,15 @@ export default function ProfileHeader() {
                                     </div>
                                 </Tippy>
                             </div>
-                        </div>
+                        </section>
 
                         <div className='profile-header-action-right'>
                             <i className='fa-regular fa-ellipsis'></i>
                         </div>
-                    </div>
-                </div>
-            </section>
-        </div>
+                    </section>
+                </section>
+            </header>
+        </section>
     );
 }
 

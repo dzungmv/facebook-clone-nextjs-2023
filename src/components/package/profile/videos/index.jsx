@@ -11,13 +11,13 @@ export default function Videos() {
     const [tab, setTab] = useState(tabs[0]);
 
     return (
-        <div className={styles.wrapperVideo}>
-            <div className='video-header'>
-                <div className='video-header-title'>Videos</div>
-                <div className='video-header-tab'>
+        <section className={styles.wrapperVideo}>
+            <header className='video-header'>
+                <h4 className='video-header-title'>Videos</h4>
+                <section className='video-header-tab'>
                     {tabs.map((data, index) => {
                         return (
-                            <div
+                            <section
                                 key={index}
                                 className={
                                     data === tab
@@ -29,31 +29,31 @@ export default function Videos() {
                                     {data}
                                 </div>
                                 <div className='active-line'></div>
-                            </div>
+                            </section>
                         );
                     })}
-                </div>
-            </div>
+                </section>
+            </header>
 
-            <div className='video-header-content'>
-                {tab === 'Your Videos' && <YourVideos data={data} />}
+            <section className='video-header-content'>
+                {tab === 'Your Videos' && <YourVideos />}
                 {tab === 'Albums' && <Albums data={data} />}
-            </div>
-        </div>
+            </section>
+        </section>
     );
 }
 
-const YourVideos = ({ data }) => {
+const YourVideos = () => {
     return (
-        <div className={styles.wrapperYourVideo}>
-            <div className='video-item'>
-                <video control>
+        <section className={styles.wrapperYourVideo}>
+            <section className='video-item'>
+                <video>
                     <source
                         src='https://www.youtube.com/watch?v=hWhIb6sChqU'
                         type='video/mp4'
                     />
                 </video>
-            </div>
+            </section>
             {/* {data?.video && data?.video.length > 0
         ? data?.video?.map((data, index) => {
             return (
@@ -61,10 +61,10 @@ const YourVideos = ({ data }) => {
             );
           })
         : null} */}
-        </div>
+        </section>
     );
 };
 
 const Albums = ({ data }) => {
-    return <div className={styles.wrapperAlbums}>Comming soon!</div>;
+    return <section className={styles.wrapperAlbums}>Comming soon!</section>;
 };

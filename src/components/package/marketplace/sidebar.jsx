@@ -44,29 +44,28 @@ const tabs = [
 const AsideBar = () => {
     const pathname = usePathname();
 
-    console.log(pathname);
     return (
-        <div className={styles.wrapperWatchPage}>
-            <div className='page-left'>
-                <div className='page-left-container'>
-                    <div className='page-left-header'>
-                        <div className='title'>Marketplace</div>
+        <section className={styles.wrapperWatchPage}>
+            <section className='page-left'>
+                <section className='page-left-container'>
+                    <section className='page-left-header'>
+                        <h3 className='title'>Marketplace</h3>
                         <div className='page-left-header-action'>
                             <i className='fa-solid fa-gear'></i>
                         </div>
-                    </div>
+                    </section>
 
-                    <div className='page-left-search'>
-                        <div className='page-left-search-container'>
+                    <section className='page-left-search'>
+                        <section className='page-left-search-container'>
                             <i className='fa-solid fa-magnifying-glass'></i>
                             <input
                                 type='text'
                                 placeholder='Search marketplace'
                             />
-                        </div>
-                    </div>
+                        </section>
+                    </section>
 
-                    <div className='page-left-content'>
+                    <section className='page-left-content'>
                         {tabs.map((item) => {
                             return (
                                 <Link
@@ -77,12 +76,12 @@ const AsideBar = () => {
                                             ? 'page-left-content-item active'
                                             : 'page-left-content-item'
                                     }>
-                                    <div className='section-left'>
+                                    <section className='section-left'>
                                         <div className='page-left-content-item-icon'>
                                             <i className={item.icon}></i>
                                         </div>
                                         <span>{item.title}</span>
-                                    </div>
+                                    </section>
 
                                     {item.sub_icon && (
                                         <i className={item.sub_icon}></i>
@@ -90,7 +89,7 @@ const AsideBar = () => {
                                 </Link>
                             );
                         })}
-                    </div>
+                    </section>
 
                     <div className='page-left-action'>
                         <button>
@@ -98,9 +97,9 @@ const AsideBar = () => {
                             Create new listing
                         </button>
                     </div>
-                </div>
-            </div>
-        </div>
+                </section>
+            </section>
+        </section>
     );
 };
 

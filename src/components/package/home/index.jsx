@@ -5,18 +5,18 @@ import SideBar from './sidebar';
 
 const HomePage = () => {
     return (
-        <section className={styles.wrapperHome}>
+        <main className={styles.wrapperHome}>
             {' '}
-            <div className='homepage-item-left'>
+            <aside className='homepage-item-left'>
                 <SideBar />
-            </div>
-            <div className='homepage-item-center'>
+            </aside>
+            <section className='homepage-item-center'>
                 <Newfeed />
-            </div>
-            <div className='homepage-item-right'>
+            </section>
+            <aside className='homepage-item-right'>
                 <Morebar />
-            </div>
-        </section>
+            </aside>
+        </main>
     );
 };
 

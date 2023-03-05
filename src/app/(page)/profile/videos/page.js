@@ -1,5 +1,5 @@
-import Photos from '@/components/package/profile/photo';
+import Videos from '@/components/package/profile/videos';
 
 export default function Page() {
-    return <Photos />;
+    return <Videos />;
 }

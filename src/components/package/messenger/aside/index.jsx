@@ -14,11 +14,11 @@ const AsideMessenger = () => {
     console.log(typeof messID);
 
     return (
-        <aside className={styles.wrapperAsideMessenger}>
-            <div className='container__left--header'>
-                <span>Chats </span>
+        <section className={styles.wrapperAsideMessenger}>
+            <section className='container__left--header'>
+                <h4>Chats </h4>
 
-                <div className='action'>
+                <section className='action'>
                     <div className='action-item'>
                         <i className='fa-solid fa-ellipsis'></i>
                     </div>
@@ -30,23 +30,23 @@ const AsideMessenger = () => {
                     <div className='action-item'>
                         <i className='fa-solid fa-pen-to-square'></i>
                     </div>
-                </div>
-            </div>
+                </section>
+            </section>
 
-            <div className='search'>
+            <section className='search'>
                 <i className='fa-solid fa-search'></i>
                 <input type='text' placeholder='Search Messenger' />
-            </div>
+            </section>
 
-            <div className='mess-tab'>
-                <div className='mess-tab-item active'>Inbox</div>
-                <div className='mess-tab-item'>
+            <section className='mess-tab'>
+                <span className='mess-tab-item active'>Inbox</span>
+                <span className='mess-tab-item'>
                     Communities
                     <span className='mess-tab-item-count'></span>
-                </div>
-            </div>
+                </span>
+            </section>
 
-            <div className='messenger'>
+            <section className='messenger'>
                 {data.users
                     .filter((item) => item.id !== 1)
                     .map((item, index) => {
@@ -59,7 +59,7 @@ const AsideMessenger = () => {
                                         ? 'messenger__item messenger__item-active'
                                         : 'messenger__item'
                                 }>
-                                <div className='messenger__item--avatar'>
+                                <figure className='messenger__item--avatar'>
                                     <Image
                                         src={item.avatar}
                                         alt='image'
@@ -68,17 +68,17 @@ const AsideMessenger = () => {
                                         sizes='100vw'
                                         fill={false}
                                     />
-                                </div>
-                                <div className='messenger__item--content'>
-                                    <div className='info'>
+                                </figure>
+                                <section className='messenger__item--content'>
+                                    <section className='info'>
                                         <div className='info__name'>
                                             {item.name}
                                         </div>
                                         <div className='info__mess'>
                                             {item.message}
                                         </div>
-                                    </div>
-                                </div>
+                                    </section>
+                                </section>
                                 <Tippy
                                     arrow={false}
                                     content={'hehe'}
@@ -86,17 +86,17 @@ const AsideMessenger = () => {
                                     interactive
                                     theme='light'
                                     trigger='click'>
-                                    <div className='action'>
+                                    <section className='action'>
                                         <div className='action__btn'>
                                             <i className='fa-regular fa-ellipsis'></i>
                                         </div>
-                                    </div>
+                                    </section>
                                 </Tippy>
                             </Link>
                         );
                     })}
-            </div>
-        </aside>
+            </section>
+        </section>
     );
 };
 

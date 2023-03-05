@@ -15,10 +15,10 @@ const Chat = ({ data }) => {
         router.push('/messenger');
     }
     return (
-        <div className={styles.wrapperChat}>
-            <div className='container__right--header'>
-                <div className='user'>
-                    <div className='user__avatar'>
+        <section className={styles.wrapperChat}>
+            <section className='container__right--header'>
+                <section className='user'>
+                    <figure className='user__avatar'>
                         <Image
                             src={data.avatar}
                             alt='image'
@@ -27,10 +27,10 @@ const Chat = ({ data }) => {
                             sizes='100vw'
                             fill={false}
                         />
-                    </div>
-                    <div className='user__name'>{data.name}</div>
-                </div>
-                <div className='action'>
+                    </figure>
+                    <p className='user__name'>{data.name}</p>
+                </section>
+                <section className='action'>
                     <div className='action__icon'>
                         <i className='fa-solid fa-phone'></i>
                     </div>
@@ -40,11 +40,11 @@ const Chat = ({ data }) => {
                     <div className='action__icon'>
                         <i className='fa-solid fa-circle-exclamation'></i>
                     </div>
-                </div>
-            </div>
-            <div className='messenger__container'>
-                <div className='messenger__container--heading'>
-                    <div className='avatar'>
+                </section>
+            </section>
+            <section className='messenger__container'>
+                <section className='messenger__container--heading'>
+                    <figure className='avatar'>
                         <Image
                             src={data.avatar}
                             alt='image'
@@ -53,35 +53,35 @@ const Chat = ({ data }) => {
                             sizes='100vw'
                             fill={false}
                         />
-                    </div>
+                    </figure>
                     <div className='name'>{data.name}</div>
-                    <div className='des'>You're friends on Facebook</div>
-                </div>
-            </div>
-            <div className='container__right--footer'>
-                <div className='footer-action'>
+                    <p className='des'>You're friends on Facebook</p>
+                </section>
+            </section>
+            <section className='container__right--footer'>
+                <section className='footer-action'>
                     <div className='footer-action-item'>
                         <i className='fa-solid fa-circle-plus'></i>
                     </div>
 
-                    <div className='footer-action-item upload__image'>
+                    <section className='footer-action-item upload__image'>
                         <input type='file' id='upload-file' hidden />
                         <label htmlFor='upload-file' className='icon'>
                             <i className='fa-sharp fa-solid fa-images'></i>
                         </label>
-                    </div>
-                </div>
+                    </section>
+                </section>
                 <div className='input__text'>
                     <input type='text' placeholder='Aa' />
                 </div>
-                <div className='like__section'>
+                <section className='like__section'>
                     <div className='icon'>
                         <i className='fa-solid fa-thumbs-up'></i>
                     </div>
-                </div>
+                </section>
                 <button hidden>Send</button>
-            </div>
-        </div>
+            </section>
+        </section>
     );
 };
 

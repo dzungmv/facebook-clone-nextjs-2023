@@ -4,11 +4,11 @@ import styles from './post.module.scss';
 
 const Post = ({ avatarImg, username, caption, media, commentData }) => {
     return (
-        <section className={styles.wrapperPost}>
-            <div className='post-item box'>
-                <div className='post-item-header'>
-                    <div className='post-item-header-left'>
-                        <div className='post-item-header-left-avatar'>
+        <article className={styles.wrapperPost}>
+            <section className='post-item box'>
+                <section className='post-item-header'>
+                    <section className='post-item-header-left'>
+                        <figure className='post-item-header-left-avatar'>
                             <Image
                                 src={avatarImg ?? ''}
                                 alt='image'
@@ -17,26 +17,26 @@ const Post = ({ avatarImg, username, caption, media, commentData }) => {
                                 fill={false}
                                 sizes='100vw'
                             />
-                        </div>
-                        <div className='post-item-header-left-info'>
+                        </figure>
+                        <section className='post-item-header-left-info'>
                             <div className='post-item-header-left-info-name'>
                                 {username ?? ''}
                             </div>
-                            <div className='post-item-header-left-info-time'>
-                                <div className='time'>1 d</div>
+                            <section className='post-item-header-left-info-time'>
+                                <span className='time'>1 d</span>
                                 <div className='privacy'>
                                     <i className='fa-solid fa-earth-americas'></i>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                            </section>
+                        </section>
+                    </section>
 
                     <div className='post-item-header-right'>
                         <i className='fa-solid fa-ellipsis-h'></i>
                     </div>
-                </div>
+                </section>
 
-                <div className='post-item-caption'>{caption ?? ''}</div>
+                <p className='post-item-caption'>{caption ?? ''}</p>
 
                 {Array.isArray(media) ? (
                     <div className='post-item-media'>
@@ -62,10 +62,10 @@ const Post = ({ avatarImg, username, caption, media, commentData }) => {
                     </div>
                 )}
 
-                <div className='post-item-count'>
-                    <div className='post-item-count-left'>
+                <section className='post-item-count'>
+                    <section className='post-item-count-left'>
                         <div className='post-item-count-left-icon'>
-                            <div className='post-item-count-left-icon-item'>
+                            <figure className='post-item-count-left-icon-item'>
                                 <Image
                                     src='https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/react/liking.svg'
                                     alt='image'
@@ -74,7 +74,7 @@ const Post = ({ avatarImg, username, caption, media, commentData }) => {
                                     fill={false}
                                     sizes='100vw'
                                 />
-                            </div>
+                            </figure>
 
                             <div className='post-item-count-left-icon-item'>
                                 <Image
@@ -108,22 +108,22 @@ const Post = ({ avatarImg, username, caption, media, commentData }) => {
                                 />
                             </div>
                         </div>
-                        <div className='post-item-count-left-num'>1.3k</div>
-                    </div>
+                        <span className='post-item-count-left-num'>1.3k</span>
+                    </section>
 
-                    <div className='post-item-count-right'>
-                        <div className='post-item-count-right-comments'>
+                    <section className='post-item-count-right'>
+                        <p className='post-item-count-right-comments'>
                             131 comments
-                        </div>
-                        <div className='post-item-count-right-shares'>
+                        </p>
+                        <p className='post-item-count-right-shares'>
                             220 shares
-                        </div>
-                    </div>
-                </div>
+                        </p>
+                    </section>
+                </section>
 
-                <div className='post-item-react'>
-                    <div className='post-item-react-item'>
-                        <div className='post-item-react-item-icon'>
+                <section className='post-item-react'>
+                    <section className='post-item-react-item'>
+                        <figure className='post-item-react-item-icon'>
                             <Image
                                 src='https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/react/like.svg'
                                 alt='image'
@@ -132,11 +132,11 @@ const Post = ({ avatarImg, username, caption, media, commentData }) => {
                                 fill={false}
                                 sizes='100vw'
                             />
-                        </div>
-                        <div className='post-item-react-item-name'>Like</div>
-                    </div>
-                    <div className='post-item-react-item'>
-                        <div className='post-item-react-item-icon'>
+                        </figure>
+                        <p className='post-item-react-item-name'>Like</p>
+                    </section>
+                    <section className='post-item-react-item'>
+                        <figure className='post-item-react-item-icon'>
                             <Image
                                 src='https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/react/comment.svg'
                                 alt='image'
@@ -145,11 +145,11 @@ const Post = ({ avatarImg, username, caption, media, commentData }) => {
                                 fill={false}
                                 sizes='100vw'
                             />
-                        </div>
-                        <div className='post-item-react-item-name'>Comment</div>
-                    </div>
-                    <div className='post-item-react-item'>
-                        <div className='post-item-react-item-icon'>
+                        </figure>
+                        <p className='post-item-react-item-name'>Comment</p>
+                    </section>
+                    <section className='post-item-react-item'>
+                        <figure className='post-item-react-item-icon'>
                             <Image
                                 src='https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/react/share.svg'
                                 alt='image'
@@ -158,21 +158,21 @@ const Post = ({ avatarImg, username, caption, media, commentData }) => {
                                 fill={false}
                                 sizes='100vw'
                             />
-                        </div>
+                        </figure>
                         <div className='post-item-react-item-name'>Share</div>
-                    </div>
-                </div>
+                    </section>
+                </section>
 
-                <div className='post-item-comment'>
+                <section className='post-item-comment'>
                     <div className='post-item-comment-header'>
-                        <div className='post-item-comment-header-item'>
+                        <section className='post-item-comment-header-item'>
                             <span>All comment</span>
                             <i className='fa-solid fa-caret-down'></i>
-                        </div>
+                        </section>
                     </div>
 
-                    <div className='post-item-comment-write'>
-                        <div className='post-item-comment-write-avatar'>
+                    <section className='post-item-comment-write'>
+                        <figure className='post-item-comment-write-avatar'>
                             <Image
                                 src={avatarImg}
                                 alt='image'
@@ -181,42 +181,42 @@ const Post = ({ avatarImg, username, caption, media, commentData }) => {
                                 fill={false}
                                 sizes='100vw'
                             />
-                        </div>
-                        <div className='post-item-comment-write-action'>
+                        </figure>
+                        <section className='post-item-comment-write-action'>
                             <div className='post-item-comment-write-action-input'>
                                 <input
                                     type='text'
                                     placeholder='Write a comment...'
                                 />
                             </div>
-                            <div className='post-item-comment-write-action-icon'>
-                                <div className='post-item-comment-write-action-icon-item'>
-                                    <div className='post-item-comment-write-action-icon-img'>
+                            <section className='post-item-comment-write-action-icon'>
+                                <section className='post-item-comment-write-action-icon-item'>
+                                    <figure className='post-item-comment-write-action-icon-img'>
                                         <Image
-                                            src='icons/homepage-content/interact/like.svg'
+                                            src='https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/react/like.svg'
                                             alt='image'
                                             width='0'
                                             height='0'
                                             fill={false}
                                             sizes='100vw'
                                         />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                    </figure>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
 
-                    <div className='post-item-comment-des'>
+                    <section className='post-item-comment-des'>
                         {commentData &&
                             commentData.length > 0 &&
                             commentData.map((user) => {
                                 user.comment && user.comment.length > 0
                                     ? user.comment.map((item, index) => {
                                           return (
-                                              <div
+                                              <section
                                                   key={item.post_id}
                                                   className='post-item-comment-des-item'>
-                                                  <div className='post-item-comment-des-item-avatar'>
+                                                  <figure className='post-item-comment-des-item-avatar'>
                                                       <Image
                                                           src={item.user_avatar}
                                                           alt='image'
@@ -225,32 +225,32 @@ const Post = ({ avatarImg, username, caption, media, commentData }) => {
                                                           fill={false}
                                                           sizes='100vw'
                                                       />
-                                                  </div>
-                                                  <div className='post-item-comment-des-item-content'>
-                                                      <div className='post-item-comment-des-item-content-wrapper'>
-                                                          <div className='post-item-comment-des-item-content-username'>
+                                                  </figure>
+                                                  <section className='post-item-comment-des-item-content'>
+                                                      <section className='post-item-comment-des-item-content-wrapper'>
+                                                          <h4 className='post-item-comment-des-item-content-username'>
                                                               {item.user_name}
-                                                          </div>
-                                                          <div className='post-item-comment-des-item-content-text'>
+                                                          </h4>
+                                                          <p className='post-item-comment-des-item-content-text'>
                                                               {item.content}
-                                                          </div>
-                                                      </div>
+                                                          </p>
+                                                      </section>
 
-                                                      <div className='post-item-comment-des-item-content-action'>
+                                                      <section className='post-item-comment-des-item-content-action'>
                                                           <div className='post-item-comment-des-item-content-action-item'>
                                                               <i className='far fa-ellipsis-h'></i>
                                                           </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
+                                                      </section>
+                                                  </section>
+                                              </section>
                                           );
                                       })
                                     : null;
                             })}
-                    </div>
-                </div>
-            </div>
-        </section>
+                    </section>
+                </section>
+            </section>
+        </article>
     );
 };
 

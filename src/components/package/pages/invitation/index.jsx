@@ -1,20 +1,22 @@
 import Image from 'next/image';
 import styles from '../pages.module.scss';
 
-const Invitation = ({ data }) => {
-    return (
-        <div className={styles.wrapperInvitation}>
-            <div className='header'>
-                <div className='header-title'>Invitations</div>
-                <div className='header-sub__title'>
-                    Page and profile invitations
-                </div>
-            </div>
+import data from '@/components/data/data';
 
-            <div className='content'>
-                <div className='content-item box'>
-                    <div className='content-item-header'>
-                        <div className='content-item-header-avatar'>
+const Invitation = () => {
+    return (
+        <section className={styles.wrapperInvitation}>
+            <header className='header'>
+                <h3 className='header-title'>Invitations</h3>
+                <p className='header-sub__title'>
+                    Page and profile invitations
+                </p>
+            </header>
+
+            <section className='content'>
+                <section className='content-item box'>
+                    <section className='content-item-header'>
+                        <figure className='content-item-header-avatar'>
                             <Image
                                 src='https://jungjung261.blob.core.windows.net/nextjs-project/pages/page3/avatar.jpg'
                                 alt='text'
@@ -23,17 +25,17 @@ const Invitation = ({ data }) => {
                                 fill={false}
                                 sizes='100vw'
                             />
-                        </div>
+                        </figure>
 
-                        <div className='content-item-header-right'>
-                            <div className='content-item-header-right-name'>
+                        <section className='content-item-header-right'>
+                            <h3 className='content-item-header-right-name'>
                                 Chị là lý do em say chị.
-                            </div>
-                            <div className='content-item-header-right-cata'>
+                            </h3>
+                            <p className='content-item-header-right-cata'>
                                 Creater
-                            </div>
-                            <div className='content-item-header-inviter'>
-                                <div className='content-item-header-inviter-avatar'>
+                            </p>
+                            <section className='content-item-header-inviter'>
+                                <figure className='content-item-header-inviter-avatar'>
                                     {' '}
                                     <Image
                                         src={data.users[1].avatar}
@@ -43,16 +45,16 @@ const Invitation = ({ data }) => {
                                         fill={false}
                                         sizes='100vw'
                                     />
-                                </div>
+                                </figure>
                                 <div className='content-item-header-inviter-name'>
                                     {data.users[1].name}{' '}
                                     <span>invited you to like this Page.</span>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                            </section>
+                        </section>
+                    </section>
 
-                    <div className='content-item-action'>
+                    <section className='content-item-action'>
                         <div className='content-item-action-btn'>
                             <button>
                                 <i className='fa-solid fa-thumbs-up'></i> Accept
@@ -65,10 +67,10 @@ const Invitation = ({ data }) => {
                                 <i className='fa-solid fa-ellipsis-h'></i>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    </section>
+                </section>
+            </section>
+        </section>
     );
 };
 

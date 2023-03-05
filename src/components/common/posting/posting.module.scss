@@ -1,0 +1,86 @@
+@use '../../../components/styles/variables' as var;
+.wrapperPosting {
+    background-color: var.$bg_clear;
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: var.$box_shadow;
+    margin-bottom: 16px;
+
+    :global .create-post-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgba(22, 24, 35, 0.1);
+        &-avatar {
+            width: 40px;
+            height: 40px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+                pointer-events: none;
+            }
+        }
+
+        &-input {
+            flex: 1;
+            width: 100%;
+            padding: 10px 16px;
+            background-color: var.$bg_icon;
+            border-radius: 20px;
+
+            &:hover {
+                cursor: pointer;
+                background-color: var.$bg_icon_hover;
+            }
+
+            span {
+                color: rgba(22, 24, 35, 0.7);
+                line-height: calc(24 / 16);
+            }
+        }
+    }
+
+    :global .create-post-footer {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 8px 0;
+            border-radius: 10px;
+            width: calc(100% / 3);
+
+            &:hover {
+                cursor: pointer;
+                background-color: var.$bg_icon;
+            }
+
+            &-icon {
+                width: 25px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    pointer-events: none;
+                }
+            }
+
+            &-name {
+                font-size: 14px;
+                line-height: calc(24 / 14);
+                font-weight: 500;
+                color: var.$color_text;
+            }
+        }
+    }
+}

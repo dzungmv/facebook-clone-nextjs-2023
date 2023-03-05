@@ -18,8 +18,8 @@ const LoginPage = () => {
 
     return (
         <>
-            <section className={styles.wrapperLoginPage}>
-                <main className='login-container'>
+            <main className={styles.wrapperLoginPage}>
+                <section className='login-container'>
                     <section className='login-left'>
                         <header>
                             <Image
@@ -32,12 +32,12 @@ const LoginPage = () => {
                             />
                         </header>
 
-                        <div className='login-left-title'>Recent logins</div>
-                        <div className='login-left-desc'>
+                        <h4 className='login-left-title'>Recent logins</h4>
+                        <p className='login-left-desc'>
                             Click your picture or add an account.
-                        </div>
+                        </p>
                         <section className='recent-section'>
-                            <div
+                            <section
                                 className='recent-item'
                                 onClick={() => setAddAccountModal(true)}>
                                 <div className='recent-item-img'>
@@ -49,7 +49,7 @@ const LoginPage = () => {
                                 <div className='recent-item-footer'>
                                     Add Account
                                 </div>
-                            </div>
+                            </section>
                         </section>
                     </section>
                     <section className='login-right'>
@@ -61,7 +61,7 @@ const LoginPage = () => {
                                 />
                             </div>
 
-                            <div className='form-control form-control-pass'>
+                            <section className='form-control form-control-pass'>
                                 <input
                                     type={showPassword ? 'text' : 'password'}
                                     placeholder='Password'
@@ -82,7 +82,7 @@ const LoginPage = () => {
                                         )}
                                     </div>
                                 )}
-                            </div>
+                            </section>
 
                             <div className='form-control form-control-btn'>
                                 <button onClick={() => router.push('/')}>
@@ -110,8 +110,8 @@ const LoginPage = () => {
                             brand or business.
                         </div>
                     </section>
-                </main>
-            </section>
+                </section>
+            </main>
 
             {signUpModal && (
                 <Modal
@@ -163,12 +163,12 @@ const LoginPage = () => {
                                 )}
                             </div>
 
-                            <div className='remember-pass'>
+                            <section className='remember-pass'>
                                 <input id='re-pass' type='checkbox' />
                                 <label htmlFor='re-pass'>
                                     Remember password
                                 </label>
-                            </div>
+                            </section>
 
                             <div className='form-control form-control-btn'>
                                 <button onClick={() => router.push('/')}>

@@ -8,14 +8,14 @@ import styles from './signup.module.scss';
 const SignUpPage = () => {
     return (
         <section className={styles.wrapperSignUp}>
-            <div className='form-group'>
+            <section className='form-group'>
                 <div className='form-control'>
                     <input type='text' placeholder='First name' />
                 </div>
                 <div className='form-control'>
                     <input type='text' placeholder='Last name' />
                 </div>
-            </div>
+            </section>
 
             <div className='form-control'>
                 <input
@@ -28,50 +28,50 @@ const SignUpPage = () => {
                 <input type='text' placeholder='New password' />
             </div>
 
-            <div className='form-label'>
+            <section className='form-label'>
                 <label htmlFor=''>
                     Date of birth <span>?</span>
                 </label>
-                <div className='date-custom'>
+                <section className='date-custom'>
                     <Tippy
                         content={''}
                         placement='bottom'
                         trigger='click'
                         interactive>
-                        <div className='date-custom-item'>
-                            <div className='label'>22</div>
+                        <section className='date-custom-item'>
+                            <label className='label'>22</label>
                             <div className='arrow'>
                                 <i className='fa-regular fa-chevron-down'></i>
                             </div>
-                        </div>
+                        </section>
                     </Tippy>
 
-                    <div className='date-custom-item'>
-                        <div className='label'>Jan</div>
+                    <section className='date-custom-item'>
+                        <label className='label'>Jan</label>
                         <div className='arrow'>
                             <i className='fa-regular fa-chevron-down'></i>
                         </div>
-                    </div>
-                    <div className='date-custom-item'>
-                        <div className='label'>2023</div>
+                    </section>
+                    <section className='date-custom-item'>
+                        <label className='label'>2023</label>
                         <div className='arrow'>
                             <i className='fa-regular fa-chevron-down'></i>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div className='form-desc'>
+                    </section>
+                </section>
+            </section>
+            <p className='form-desc'>
                 People who use our service may have uploaded your contact
                 information to Facebook. <Link href={''}>Learn more.</Link>
-            </div>
+            </p>
 
-            <div className='form-desc'>
+            <p className='form-desc'>
                 By clicking Sign Up, you agree to our{' '}
                 <Link href={''}>Terms</Link>,{' '}
                 <Link href=''>Privacy Policy</Link> and{' '}
                 <Link href=''>Cookies Policy</Link>. You may receive SMS
                 notifications from us and can opt out at any time.
-            </div>
+            </p>
 
             <div className='form-btn'>
                 <button>Sign Up</button>

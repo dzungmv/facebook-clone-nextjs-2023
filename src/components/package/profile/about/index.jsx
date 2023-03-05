@@ -17,10 +17,10 @@ const nav_items = [
 export default function About() {
     const [tab, setTab] = useState(nav_items[0]);
     return (
-        <div className={styles.wrapperAbout}>
-            <div className='about-left'>
-                <div className='title'>About</div>
-                <div className='about-left-content'>
+        <section className={styles.wrapperAbout}>
+            <section className='about-left'>
+                <h4 className='title'>About</h4>
+                <section className='about-left-content'>
                     {nav_items.map((item, index) => (
                         <div
                             key={index}
@@ -33,9 +33,9 @@ export default function About() {
                             {item}
                         </div>
                     ))}
-                </div>
-            </div>
-            <div className='about-right'>
+                </section>
+            </section>
+            <section className='about-right'>
                 {tab === 'Overview' && <Overview />}
                 {tab === 'Work and education' && <WorkAndEducation />}
                 {tab === 'Places lived' && <PlacesLived />}
@@ -45,37 +45,37 @@ export default function About() {
                 )}
                 {tab === 'Details about you' && <DetailsAboutYou />}
                 {tab === 'Life events' && <LifeEvents />}
-            </div>
-        </div>
+            </section>
+        </section>
     );
 }
 
 const Overview = () => {
     return (
-        <div className={styles.wrapperOverview}>
-            <div className='over-item'>
-                <div className='over-item-left'>
+        <section className={styles.wrapperOverview}>
+            <section className='over-item'>
+                <section className='over-item-left'>
                     <div className='over-item-left-icon'>
                         <i className='fa-solid fa-briefcase'></i>
                     </div>
-                    <div className='over-item-left-name'>
+                    <section className='over-item-left-name'>
                         <Link href=''>Administrating Director</Link> at{' '}
                         <Link href=''>CareFree+</Link>
-                    </div>
-                </div>
+                    </section>
+                </section>
 
-                <div className='over-item-right'>
+                <section className='over-item-right'>
                     <div className='over-item-right-icon'>
                         <i className='fa-regular fa-earth-americas'></i>
                     </div>
                     <div className='over-item-right-action'>
                         <i className='fa-solid fa-ellipsis'></i>
                     </div>
-                </div>
-            </div>
+                </section>
+            </section>
 
-            <div className='over-item'>
-                <div className='over-item-left'>
+            <section className='over-item'>
+                <section className='over-item-left'>
                     <div className='over-item-left-icon'>
                         <i className='fa-sharp fa-solid fa-graduation-cap'></i>
                     </div>
@@ -83,65 +83,65 @@ const Overview = () => {
                         Studied Sotfware Engineering at{' '}
                         <Link href=''>Đại học Tôn Đức Thắng</Link>
                     </div>
-                </div>
+                </section>
 
-                <div className='over-item-right'>
+                <section className='over-item-right'>
                     <div className='over-item-right-icon'>
                         <i className='fa-regular fa-earth-americas'></i>
                     </div>
                     <div className='over-item-right-action'>
                         <i className='fa-solid fa-ellipsis'></i>
                     </div>
-                </div>
-            </div>
+                </section>
+            </section>
 
-            <div className='over-item'>
-                <div className='over-item-left'>
+            <section className='over-item'>
+                <section className='over-item-left'>
                     <div className='over-item-left-icon'>
                         <i className='fa-solid fa-house-chimney'></i>
                     </div>
                     <div className='over-item-left-name'>
                         Lives in <Link href=''> Ho Chi Minh City, Vietnam</Link>
                     </div>
-                </div>
+                </section>
 
-                <div className='over-item-right'>
+                <section className='over-item-right'>
                     <div className='over-item-right-icon'>
                         <i className='fa-regular fa-earth-americas'></i>
                     </div>
                     <div className='over-item-right-action'>
                         <i className='fa-solid fa-ellipsis'></i>
                     </div>
-                </div>
-            </div>
+                </section>
+            </section>
 
-            <div className='over-item'>
-                <div className='over-item-left'>
+            <section className='over-item'>
+                <section className='over-item-left'>
                     <div className='over-item-left-icon'>
                         <i className='fa-solid fa-location-dot'></i>
                     </div>
                     <div className='over-item-left-name'>
                         From <Link href=''> Ho Chi Minh City, Vietnam</Link>
                     </div>
-                </div>
+                </section>
 
-                <div className='over-item-right'>
+                <section className='over-item-right'>
                     <div className='over-item-right-icon'>
                         <i className='fa-regular fa-earth-americas'></i>
                     </div>
                     <div className='over-item-right-action'>
                         <i className='fa-solid fa-ellipsis'></i>
                     </div>
-                </div>
-            </div>
+                </section>
+            </section>
 
-            <div className='over-item'>
-                <div className='over-item-left'>
+            <section className='over-item'>
+                <section className='over-item-left'>
                     <div className='over-item-left-icon'>
                         <i className='fa-solid fa-heart'></i>
                     </div>
-                    <div className='over-item-left-name'>Single</div>
-                </div>
+                    <span className='over-item-left-name'>Single</span>
+                </section>
 
                 <div className='over-item-right'>
                     <div className='over-item-right-icon'>
@@ -151,37 +151,35 @@ const Overview = () => {
                         <i className='fa-solid fa-ellipsis'></i>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div className='over-item'>
-                <div className='over-item-left'>
+            <section className='over-item'>
+                <section className='over-item-left'>
                     <div className='over-item-left-icon'>
                         <i className='fa-solid fa-phone'></i>
                     </div>
-                    <div className='over-item-left-name'>
-                        <div className='over-item-left-name-phone'>
-                            03421241484
-                        </div>
+                    <section className='over-item-left-name'>
+                        <p className='over-item-left-name-phone'>03421241484</p>
                         <span>Mobile</span>
-                    </div>
-                </div>
+                    </section>
+                </section>
 
-                <div className='over-item-right'>
+                <section className='over-item-right'>
                     <div className='over-item-right-icon'>
                         <i className='fa-regular fa-earth-americas'></i>
                     </div>
                     <div className='over-item-right-action'>
                         <i className='fa-solid fa-ellipsis'></i>
                     </div>
-                </div>
-            </div>
-        </div>
+                </section>
+            </section>
+        </section>
     );
 };
 
 const WorkAndEducation = () => {
     return (
-        <div
+        <section
             style={{
                 width: '100%',
                 height: '100%',
@@ -193,13 +191,13 @@ const WorkAndEducation = () => {
                 color: 'rgba(0,0,0,0.5)',
             }}>
             Update soon!
-        </div>
+        </section>
     );
 };
 
 const PlacesLived = () => {
     return (
-        <div
+        <section
             style={{
                 width: '100%',
                 height: '100%',
@@ -211,13 +209,13 @@ const PlacesLived = () => {
                 color: 'rgba(0,0,0,0.5)',
             }}>
             Update soon!
-        </div>
+        </section>
     );
 };
 
 const ContactAndBasicInfo = () => {
     return (
-        <div
+        <section
             style={{
                 width: '100%',
                 height: '100%',
@@ -229,13 +227,13 @@ const ContactAndBasicInfo = () => {
                 color: 'rgba(0,0,0,0.5)',
             }}>
             Update soon!
-        </div>
+        </section>
     );
 };
 
 const FamilyAndRelationships = () => {
     return (
-        <div
+        <section
             style={{
                 width: '100%',
                 height: '100%',
@@ -247,13 +245,13 @@ const FamilyAndRelationships = () => {
                 color: 'rgba(0,0,0,0.5)',
             }}>
             Update soon!
-        </div>
+        </section>
     );
 };
 
 const DetailsAboutYou = () => {
     return (
-        <div
+        <section
             style={{
                 width: '100%',
                 height: '100%',
@@ -265,13 +263,13 @@ const DetailsAboutYou = () => {
                 color: 'rgba(0,0,0,0.5)',
             }}>
             Update soon!
-        </div>
+        </section>
     );
 };
 
 const LifeEvents = () => {
     return (
-        <div
+        <section
             style={{
                 width: '100%',
                 height: '100%',
@@ -283,6 +281,6 @@ const LifeEvents = () => {
                 color: 'rgba(0,0,0,0.5)',
             }}>
             Update soon!
-        </div>
+        </section>
     );
 };

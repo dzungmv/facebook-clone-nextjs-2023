@@ -2,50 +2,48 @@
 
 /* eslint-disable @next/next/no-img-element */
 import { useState, useRef } from 'react';
-
-import YourPagesAndProfile from './yourspage';
-import Discover from './discover';
-import LikedPage from './likepage';
-import Invitation from './invitation';
+import { usePathname } from 'next/navigation';
 
 import styles from './pages.module.scss';
 import data from '@/components/data/data';
 import Image from 'next/image';
+import Link from 'next/link';
 
-export default function Pages() {
+const PagesSidebar = () => {
+    const pathname = usePathname();
+
     const pageLeftRef = useRef(null);
-    const [tab, setTab] = useState(0);
     const [yourPage, setYourPage] = useState(true);
 
     return (
-        <div className={styles.wrapperPages}>
-            <div className='pages-left'>
-                <div useRef={pageLeftRef} className='pages-left-container'>
-                    <div className='pages-left-header'>
-                        <div className='pages-left-header-title'>Pages</div>
-                        <div className='pages-left-header-action'>
+        <section className={styles.wrapperSidebar}>
+            <section className='sidebar-wrapper'>
+                <section
+                    useRef={pageLeftRef}
+                    className='sidebar-wrapper-container'>
+                    <header className='sidebar-wrapper-header'>
+                        <h3 className='sidebar-wrapper-header-title'>Pages</h3>
+                        <div className='sidebar-wrapper-header-action'>
                             <i className='fa-solid fa-gear'></i>
                         </div>
-                    </div>
+                    </header>
 
-                    <div className='pages-left-content'>
-                        <div
+                    <section className='sidebar-wrapper-content'>
+                        <Link
+                            href='/pages'
                             className={
-                                tab === 0
-                                    ? 'pages-left-content-item your-page-section active'
-                                    : 'pages-left-content-item your-page-section'
-                            }
-                            onClick={() => {
-                                setTab(0);
-                            }}>
-                            <div className='your-page-header'>
-                                <div className='pages-left-content-item-icon'>
+                                pathname === '/pages'
+                                    ? 'sidebar-wrapper-content-item your-page-section active'
+                                    : 'sidebar-wrapper-content-item your-page-section'
+                            }>
+                            <section className='your-page-header'>
+                                <div className='sidebar-wrapper-content-item-icon'>
                                     <i className='fas fa-flag-alt'></i>
                                 </div>
                                 <span>Your Pages and Profile</span>
-                            </div>
+                            </section>
 
-                            <div
+                            <section
                                 className='your-page-header-drop'
                                 onClick={() => setYourPage(!yourPage)}>
                                 {yourPage ? (
@@ -53,14 +51,14 @@ export default function Pages() {
                                 ) : (
                                     <i className='fa-solid fa-chevron-down'></i>
                                 )}
-                            </div>
-                        </div>
+                            </section>
+                        </Link>
 
-                        <div className='your-page'>
+                        <section className='your-page'>
                             {yourPage && (
-                                <div className='your-page-content'>
-                                    <div className='your-page-item'>
-                                        <div className='your-page-item-img'>
+                                <section className='your-page-content'>
+                                    <section className='your-page-item'>
+                                        <figure className='your-page-item-img'>
                                             <Image
                                                 src={data.user.page.page_avatar}
                                                 alt='text'
@@ -69,115 +67,109 @@ export default function Pages() {
                                                 fill={false}
                                                 sizes='100vw'
                                             />
-                                        </div>
-                                        <div className='your-page-item-name'>
+                                        </figure>
+                                        <p className='your-page-item-name'>
                                             {data.user.page.name}
-                                        </div>
-                                    </div>
-                                </div>
+                                        </p>
+                                    </section>
+                                </section>
                             )}
 
                             <div className='your-page-action'>
                                 <button>+ Create new page</button>
                             </div>
-                        </div>
+                        </section>
 
                         <hr />
 
-                        <div className='link-section'>
-                            <div className='link-section-item'>
-                                <div className='link-section-left'>
+                        <section className='link-section'>
+                            <section className='link-section-item'>
+                                <section className='link-section-left'>
                                     <div className='link-section-left-icon'>
                                         <i className='fa-brands fa-meta'></i>
                                     </div>
-                                    <div className='link-section-left-title'>
+                                    <span className='link-section-left-title'>
                                         Meta Business Suite
-                                    </div>
-                                </div>
+                                    </span>
+                                </section>
 
                                 <div className='link-section-right'>
                                     <i className='fa-light fa-arrow-up-right'></i>
                                 </div>
-                            </div>
+                            </section>
 
-                            <div className='link-section-item'>
-                                <div className='link-section-left'>
+                            <section className='link-section-item'>
+                                <section className='link-section-left'>
                                     <div className='link-section-left-icon'>
                                         <i className='fa-regular fa-inbox-full'></i>
                                     </div>
-                                    <div className='link-section-left-title'>
+                                    <span className='link-section-left-title'>
                                         Inbox
-                                    </div>
-                                </div>
+                                    </span>
+                                </section>
 
                                 <div className='link-section-right'>
                                     <i className='fa-light fa-arrow-up-right'></i>
                                 </div>
-                            </div>
+                            </section>
 
-                            <div className='link-section-item'>
-                                <div className='link-section-left'>
+                            <section className='link-section-item'>
+                                <section className='link-section-left'>
                                     <div className='link-section-left-icon'>
                                         <i className='fa-regular fa-signal-bars'></i>
                                     </div>
-                                    <div className='link-section-left-title'>
+                                    <span className='link-section-left-title'>
                                         Insights
-                                    </div>
-                                </div>
+                                    </span>
+                                </section>
 
                                 <div className='link-section-right'>
                                     <i className='fa-light fa-arrow-up-right'></i>
                                 </div>
-                            </div>
-                        </div>
+                            </section>
+                        </section>
 
                         <hr />
-                        <div
+                        <Link
+                            href='/pages/discover'
                             className={
-                                tab === 1
-                                    ? 'pages-left-content-item active'
-                                    : 'pages-left-content-item'
-                            }
-                            onClick={() => {
-                                setTab(1);
-                            }}>
-                            <div className='pages-left-content-item-icon'>
+                                pathname === '/pages/discover'
+                                    ? 'sidebar-wrapper-content-item active'
+                                    : 'sidebar-wrapper-content-item'
+                            }>
+                            <div className='sidebar-wrapper-content-item-icon'>
                                 <i className='fa-solid fa-compass'></i>
                             </div>
                             <span>Discover</span>
-                        </div>
+                        </Link>
 
-                        <div
+                        <Link
+                            href='/pages/liked-pages'
                             className={
-                                tab === 2
-                                    ? 'pages-left-content-item active'
-                                    : 'pages-left-content-item'
-                            }
-                            onClick={() => {
-                                setTab(2);
-                            }}>
-                            <div className='pages-left-content-item-icon'>
+                                pathname === '/pages/liked-pages'
+                                    ? 'sidebar-wrapper-content-item active'
+                                    : 'sidebar-wrapper-content-item'
+                            }>
+                            <div className='sidebar-wrapper-content-item-icon'>
                                 <i className='fa-solid fa-thumbs-up'></i>
                             </div>
                             <span>Liked Pages</span>
-                        </div>
+                        </Link>
 
-                        <div
+                        <Link
+                            href='/pages/invitations'
                             className={
-                                tab === 3
-                                    ? 'pages-left-content-item active'
-                                    : 'pages-left-content-item'
-                            }
-                            onClick={() => {
-                                setTab(3);
-                            }}>
-                            <div className='pages-left-content-item-icon'>
+                                pathname === '/pages/invitations'
+                                    ? 'sidebar-wrapper-content-item active'
+                                    : 'sidebar-wrapper-content-item'
+                            }>
+                            <div className='sidebar-wrapper-content-item-icon'>
                                 <i className='fa-solid fa-user-plus'></i>
                             </div>
                             <span>Invitations</span>
-                        </div>
-                    </div>
-                </div>
+                        </Link>
+                    </section>
+                </section>
 
                 <div
                     className='toggle-bar'
@@ -186,13 +178,9 @@ export default function Pages() {
                     }}>
                     <i className='fa-solid fa-bars'></i>
                 </div>
-            </div>
-            <div className='pages-right'>
-                {tab === 0 && <YourPagesAndProfile data={data} />}
-                {tab === 1 && <Discover />}
-                {tab === 2 && <LikedPage />}
-                {tab === 3 && <Invitation data={data} />}
-            </div>
-        </div>
+            </section>
+        </section>
     );
-}
+};
+
+export default PagesSidebar;

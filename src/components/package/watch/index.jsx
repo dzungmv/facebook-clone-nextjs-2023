@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-import WatchHome from './home';
 import styles from './watch.module.scss';
 
 const tabs = [
@@ -10,127 +10,71 @@ const tabs = [
         id: 1,
         title: 'Home',
         icon: 'fa-solid fa-home',
+        url: '',
     },
     {
         id: 2,
         title: 'Live',
         icon: 'fa-solid fa-video',
+        url: '/live',
     },
     {
         id: 3,
         title: 'Shows',
         icon: 'fa-solid fa-clapperboard-play',
+        url: '/shows',
     },
     {
         id: 4,
         title: 'Saved videos',
         icon: 'fa-solid fa-bookmark',
+        url: '/saved',
     },
 ];
 
-const WatchPage = () => {
-    const [tab, setTab] = useState(tabs[0].id);
+const WatchSidebar = () => {
+    const pathname = usePathname();
     return (
-        <div className={styles.wrapperWatchPage}>
-            <div className='page-left'>
-                <div className='page-left-container'>
-                    <div className='page-left-header'>
-                        <div className='title'>Watch</div>
+        <section className={styles.wrapperWatchSidebar}>
+            <section className='page-left'>
+                <section className='page-left-container'>
+                    <section className='page-left-header'>
+                        <h4 className='title'>Watch</h4>
                         <div className='page-left-header-action'>
                             <i className='fa-solid fa-gear'></i>
                         </div>
-                    </div>
+                    </section>
 
-                    <div className='page-left-search'>
-                        <div className='page-left-search-container'>
+                    <section className='page-left-search'>
+                        <section className='page-left-search-container'>
                             <i className='fa-solid fa-magnifying-glass'></i>
                             <input type='text' placeholder='Search video' />
-                        </div>
-                    </div>
+                        </section>
+                    </section>
 
-                    <div className='page-left-content'>
+                    <section className='page-left-content'>
                         {tabs.map((item) => {
                             return (
-                                <div
+                                <Link
+                                    href={`/watch${item.url}`}
                                     key={item.id}
                                     className={
-                                        item.id === tab
+                                        `/watch${item.url}` === pathname
                                             ? 'page-left-content-item active'
                                             : 'page-left-content-item'
-                                    }
-                                    onClick={() => setTab(item.id)}>
+                                    }>
                                     <div className='page-left-content-item-icon'>
                                         <i className={item.icon}></i>
                                     </div>
                                     <span>{item.title}</span>
-                                </div>
+                                </Link>
                             );
                         })}
-                    </div>
-                </div>
-            </div>
-            <div className='page-right'>
-                {tab === 1 && <WatchHome />}
-                {tab === 2 && <LivePage />}
-                {tab === 3 && <ShowPages />}
-                {tab === 4 && <SavedPage />}
-            </div>
-        </div>
+                    </section>
+                </section>
+            </section>
+        </section>
     );
 };
 
-export default WatchPage;
-
-export const LivePage = () => {
-    return (
-        <div
-            style={{
-                width: '100%',
-                height: '90vh',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                fontSize: '1.5rem',
-                color: 'grey',
-                fontWeight: 'bold',
-            }}>
-            Comming soon!
-        </div>
-    );
-};
-
-export const ShowPages = () => {
-    return (
-        <div
-            style={{
-                width: '100%',
-                height: '90vh',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                fontSize: '1.5rem',
-                color: 'grey',
-                fontWeight: 'bold',
-            }}>
-            Comming soon!
-        </div>
-    );
-};
-
-export const SavedPage = () => {
-    return (
-        <div
-            style={{
-                width: '100%',
-                height: '90vh',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                fontSize: '1.5rem',
-                color: 'grey',
-                fontWeight: 'bold',
-            }}>
-            Comming soon!
-        </div>
-    );
-};
+export default WatchSidebar;

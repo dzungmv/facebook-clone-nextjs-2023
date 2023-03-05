@@ -7,16 +7,16 @@ import Image from 'next/image';
 
 const Morebar = () => {
     return (
-        <div className={styles.wrapperSubbar}>
+        <section className={styles.wrapperSubbar}>
             <section className='your-page-profile'>
-                <div className='your-page-profile-title'>
-                    <span>Your Pages and Profile</span>
+                <section className='your-page-profile-title'>
+                    <h4>Your Pages and Profile</h4>
                     <div className='your-page-profile-title-action'>
                         <i className='fa-regular fa-ellipsis'></i>
                     </div>
-                </div>
-                <div className='your-page-profile-panging'>
-                    <div className='your-page-profile-panging-avatar'>
+                </section>
+                <section className='your-page-profile-panging'>
+                    <figure className='your-page-profile-panging-avatar'>
                         <Image
                             src={data.user.page.page_avatar}
                             alt='image'
@@ -25,14 +25,14 @@ const Morebar = () => {
                             fill={false}
                             sizes='100vw'
                         />
-                    </div>
-                    <div className='your-page-profile-panging-name'>
+                    </figure>
+                    <p className='your-page-profile-panging-name'>
                         {data.user.page.name}
-                    </div>
-                </div>
-                <div className='your-page-profile-content'>
-                    <div className='your-page-profile-content-item'>
-                        <div className='your-page-profile-content-item-icon'>
+                    </p>
+                </section>
+                <section className='your-page-profile-content'>
+                    <section className='your-page-profile-content-item'>
+                        <figure className='your-page-profile-content-item-icon'>
                             <Image
                                 src={
                                     'https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/page/swich_page.svg'
@@ -43,13 +43,13 @@ const Morebar = () => {
                                 fill={false}
                                 sizes='100vw'
                             />
-                        </div>
-                        <div className='your-page-profile-content-item-name'>
+                        </figure>
+                        <p className='your-page-profile-content-item-name'>
                             Switch to into page
-                        </div>
-                    </div>
-                    <div className='your-page-profile-content-item'>
-                        <div className='your-page-profile-content-item-icon'>
+                        </p>
+                    </section>
+                    <section className='your-page-profile-content-item'>
+                        <figure className='your-page-profile-content-item-icon'>
                             <Image
                                 src={
                                     'https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/page/promotion.svg'
@@ -60,25 +60,25 @@ const Morebar = () => {
                                 fill={false}
                                 sizes='100vw'
                             />
-                        </div>
-                        <div className='your-page-profile-content-item-name'>
+                        </figure>
+                        <p className='your-page-profile-content-item-name'>
                             Create promotion
-                        </div>
-                    </div>
-                </div>
+                        </p>
+                    </section>
+                </section>
             </section>
 
             <section className='friend-request'>
-                <div className='friend-request-header'>
-                    <span>Friend requests</span>
+                <section className='friend-request-header'>
+                    <h4>Friend requests</h4>
                     <Link href='' className='friend-request-header-action'>
                         See all
                     </Link>
-                </div>
+                </section>
 
                 {
-                    <div className='friend-request-content'>
-                        <div className='friend-request-content-left'>
+                    <section className='friend-request-content'>
+                        <figure className='friend-request-content-left'>
                             <Image
                                 src={data.user.friend_request[0].user_avatar}
                                 alt='image'
@@ -87,13 +87,13 @@ const Morebar = () => {
                                 fill={false}
                                 sizes='100vw'
                             />
-                        </div>
-                        <div className='friend-request-content-right'>
-                            <div className='friend-request-content-right-info'>
-                                <div className='friend-request-content-right-info-user'>
-                                    <div className='friend-request-content-right-info-user-name'>
+                        </figure>
+                        <section className='friend-request-content-right'>
+                            <section className='friend-request-content-right-info'>
+                                <section className='friend-request-content-right-info-user'>
+                                    <p className='friend-request-content-right-info-user-name'>
                                         {data.user.friend_request[0].user_name}
-                                    </div>
+                                    </p>
                                     <div className='friend-request-content-right-info-user-friend'>
                                         {
                                             data.user.friend_request[0]
@@ -101,26 +101,26 @@ const Morebar = () => {
                                         }{' '}
                                         mutual friends
                                     </div>
-                                </div>
+                                </section>
 
                                 <div className='friend-request-content-right-info-time'>
                                     {data.user.friend_request[0].time_request}
                                 </div>
-                            </div>
+                            </section>
 
-                            <div className='friend-request-content-right-action'>
+                            <section className='friend-request-content-right-action'>
                                 <button>Confirm</button>
                                 <button>Delete</button>
-                            </div>
-                        </div>
-                    </div>
+                            </section>
+                        </section>
+                    </section>
                 }
             </section>
 
             <section className='birthday'>
-                <div className='birthday-title'>Birthdays</div>
-                <div className='birthday-content'>
-                    <div className='birthday-content-left'>
+                <h4 className='birthday-title'>Birthdays</h4>
+                <section className='birthday-content'>
+                    <figure className='birthday-content-left'>
                         <Image
                             src={data.users[1].avatar}
                             alt='image'
@@ -129,18 +129,18 @@ const Morebar = () => {
                             fill={false}
                             sizes='100vw'
                         />
-                    </div>
-                    <div className='birthday-content-right'>
+                    </figure>
+                    <section className='birthday-content-right'>
                         <span>{data.users[1].name}</span> and{' '}
                         <span>4 other</span> have their birthday today.
-                    </div>
-                </div>
+                    </section>
+                </section>
             </section>
 
             <section className='contact'>
-                <div className='contact-header'>
-                    <span>Contacts</span>
-                    <div className='contact-header-action'>
+                <section className='contact-header'>
+                    <h4>Contacts</h4>
+                    <section className='contact-header-action'>
                         <div className='contact-header-action-item'>
                             <i className='fal fa-video'></i>
                         </div>
@@ -150,14 +150,16 @@ const Morebar = () => {
                         <div className='contact-header-action-item'>
                             <i className='fa-regular fa-ellipsis'></i>
                         </div>
-                    </div>
-                </div>
+                    </section>
+                </section>
 
-                <div className='contact-content'>
+                <section className='contact-content'>
                     {data.users.map((user) => {
                         return (
-                            <div key={user.id} className='contact-content-item'>
-                                <div className='contact-content-item-left'>
+                            <section
+                                key={user.id}
+                                className='contact-content-item'>
+                                <figure className='contact-content-item-left'>
                                     <Image
                                         src={user.avatar}
                                         alt='image'
@@ -169,16 +171,16 @@ const Morebar = () => {
                                     <div className='contact-content-item-left-active'>
                                         <span></span>
                                     </div>
-                                </div>
-                                <div className='contact-content-item-right'>
+                                </figure>
+                                <p className='contact-content-item-right'>
                                     {user.name}
-                                </div>
-                            </div>
+                                </p>
+                            </section>
                         );
                     })}
-                </div>
+                </section>
             </section>
-        </div>
+        </section>
     );
 };
 

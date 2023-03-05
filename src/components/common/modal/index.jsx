@@ -41,26 +41,26 @@ function Modal({ title, children, show, close, size, notCloseOutside }) {
     return (
         <>
             {show ? (
-                <div
+                <section
                     className={styles.wrapperModal}
                     ref={modalRef}
                     onClick={!notCloseOutside ? closeModal : null}>
-                    <div
+                    <section
                         // set width modal auto or 100%
                         className={`container ${size}`}
                         // style={{ width: `${setWidthModal}` }}
                     >
-                        <div className='heading'>
-                            <div className='title'>{title}</div>
+                        <header className='heading'>
+                            <h4 className='title'>{title}</h4>
                             <span
                                 className='close'
                                 onClick={() => close(false)}>
                                 <li className='fa-light fa-xmark'></li>
                             </span>
-                        </div>
-                        <div className='content'>{children}</div>
-                    </div>
-                </div>
+                        </header>
+                        <section className='content'>{children}</section>
+                    </section>
+                </section>
             ) : null}
         </>
     );

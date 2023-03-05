@@ -6,10 +6,10 @@ import Image from 'next/image';
 
 export default function SideBar() {
     return (
-        <aside className={styles.wrapperSidebar}>
-            <div className='container'>
-                <div className='sidebar-item'>
-                    <div className='sidebar-item-icon'>
+        <section className={styles.wrapperSidebar}>
+            <section className='container'>
+                <section className='sidebar-item'>
+                    <figure className='sidebar-item-icon'>
                         <Image
                             src={data.user.avatar}
                             alt='User avatar'
@@ -18,13 +18,13 @@ export default function SideBar() {
                             fill={false}
                             sizes='100vw'
                         />
-                    </div>
+                    </figure>
                     <div className='sidebar-item-name'>Minh Dzung</div>
-                </div>
+                </section>
 
                 {sidebarui.map((item) => (
-                    <div key={item.id} className='sidebar-item'>
-                        <div className='sidebar-item-icon'>
+                    <section key={item.id} className='sidebar-item'>
+                        <figure className='sidebar-item-icon'>
                             <Image
                                 src={item.icon}
                                 alt='Sidebar icon'
@@ -33,11 +33,11 @@ export default function SideBar() {
                                 fill={false}
                                 sizes='100vw'
                             />
-                        </div>
-                        <div className='sidebar-item-name'>{item.name}</div>
-                    </div>
+                        </figure>
+                        <span className='sidebar-item-name'>{item.name}</span>
+                    </section>
                 ))}
-            </div>
-        </aside>
+            </section>
+        </section>
     );
 }

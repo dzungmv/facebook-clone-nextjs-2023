@@ -12,24 +12,24 @@ export default function Photos() {
     const [tab, setTab] = useState(filter[0]);
 
     return (
-        <div className={styles.wrapperPhotos}>
-            <div className='photo-header'>
-                <div className='photo-header-wrapper'>
-                    <div className='photo-header-title'>Photos</div>
-                    <div className='photo-header-action'>
+        <section className={styles.wrapperPhotos}>
+            <header className='photo-header'>
+                <section className='photo-header-wrapper'>
+                    <h4 className='photo-header-title'>Photos</h4>
+                    <section className='photo-header-action'>
                         <div className='photo-header-action-s'>
                             Add photos/video
                         </div>
                         <div className='photo-header-action-b'>
                             <i className='fa-solid fa-ellipsis'></i>
                         </div>
-                    </div>
-                </div>
+                    </section>
+                </section>
 
-                <div className='photo-header-filter'>
+                <section className='photo-header-filter'>
                     {filter.map((data, index) => {
                         return (
-                            <div
+                            <section
                                 key={index}
                                 className={
                                     data === tab
@@ -41,24 +41,24 @@ export default function Photos() {
                                     {data}
                                 </div>
                                 <div className='active-line'></div>
-                            </div>
+                            </section>
                         );
                     })}
-                </div>
-            </div>
+                </section>
+            </header>
 
-            <div className='photo-content'>
+            <section className='photo-content'>
                 {tab === 'Your Photos' && <YourPhoto data={data} />}
                 {tab === 'Albums' && <Albums />}
-            </div>
-        </div>
+            </section>
+        </section>
     );
 }
 
 const YourPhoto = ({ data }) => {
     return (
-        <div className={styles.wrapperYourPhoto}>
-            <div className='your-photo-item'>
+        <section className={styles.wrapperYourPhoto}>
+            <figure className='your-photo-item'>
                 <Image
                     src={data.user.avatar}
                     alt='image'
@@ -70,11 +70,11 @@ const YourPhoto = ({ data }) => {
                 <div className='your-photo-item-edit'>
                     <i className='fa-solid fa-pen'></i>
                 </div>
-            </div>
-        </div>
+            </figure>
+        </section>
     );
 };
 
 const Albums = () => {
-    return <div className={styles.wrapperAlbums}>Comming soon!</div>;
+    return <section className={styles.wrapperAlbums}>Comming soon!</section>;
 };

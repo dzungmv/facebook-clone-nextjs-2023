@@ -20,12 +20,12 @@ export default function Gallery({ media }) {
     return (
         <>
             {/* {imgPreviewer.clickImg && <ImageViewer media={media} />} */}
-            <div className={styles.wrapperGallery}>
+            <section className={styles.wrapperGallery}>
                 {media.map((data, index) => {
                     const count = media.length - 4;
                     if (media.length === 1) {
                         return (
-                            <div
+                            <figure
                                 // onClick={() => handleClick(data, index)}
                                 key={index}
                                 className='image__1'>
@@ -37,11 +37,11 @@ export default function Gallery({ media }) {
                                     fill={false}
                                     sizes='100vw'
                                 />
-                            </div>
+                            </figure>
                         );
                     } else if (media.length === 2) {
                         return (
-                            <div
+                            <figure
                                 // onClick={() => handleClick(data, index)}
                                 key={index}
                                 className='image__2'>
@@ -53,11 +53,11 @@ export default function Gallery({ media }) {
                                     fill={false}
                                     sizes='100vw'
                                 />
-                            </div>
+                            </figure>
                         );
                     } else if (media.length === 3) {
                         return (
-                            <div key={index} className='image__3'>
+                            <figure key={index} className='image__3'>
                                 <Image
                                     // onClick={() => handleClick(data, index)}
                                     src={data}
@@ -67,7 +67,7 @@ export default function Gallery({ media }) {
                                     fill={false}
                                     sizes='100vw'
                                 />
-                            </div>
+                            </figure>
                         );
                     } else if (index < 3) {
                         return (
@@ -84,7 +84,7 @@ export default function Gallery({ media }) {
                         );
                     } else if (index === 3) {
                         return (
-                            <div
+                            <figure
                                 // onClick={() => handleClick(data, index)}
                                 key={index}
                                 className='image__more'
@@ -98,13 +98,13 @@ export default function Gallery({ media }) {
                                 <span className='image__count'>
                                     {count > 0 ? `+${count}` : ''}
                                 </span>
-                            </div>
+                            </figure>
                         );
                     } else {
                         return null;
                     }
                 })}
-            </div>
+            </section>
         </>
     );
 }

@@ -14,11 +14,11 @@ export default function PersonalTooltip({ data, isRef }) {
         },
     };
     return (
-        <div className={styles.wrapperPersonalTooltip}>
-            <div className='user-info'>
-                <div className='user-info-item' onClick={handle.goToProfile}>
-                    <div className='user-info-item-information'>
-                        <div className='user-info-item-information-avatar'>
+        <section className={styles.wrapperPersonalTooltip}>
+            <section className='user-info'>
+                <Link className='user-info-item' href={'/profile'}>
+                    <section className='user-info-item-information'>
+                        <figure className='user-info-item-information-avatar'>
                             <Image
                                 src={data.user.avatar}
                                 alt='image'
@@ -27,14 +27,14 @@ export default function PersonalTooltip({ data, isRef }) {
                                 fill={false}
                                 sizes='100vw'
                             />
-                        </div>
-                        <div className='user-info-item-information-username'>
+                        </figure>
+                        <p className='user-info-item-information-username'>
                             {data.user.name}
-                        </div>
-                    </div>
-                    <div className='user-info-item-swpage'>
+                        </p>
+                    </section>
+                    <section className='user-info-item-swpage'>
                         <i className='fa-light fa-arrow-rotate-left'></i>
-                        <div className='user-info-item-swpage-image'>
+                        <figure className='user-info-item-swpage-image'>
                             <Image
                                 src={data.user.page.page_avatar}
                                 alt='image'
@@ -43,57 +43,57 @@ export default function PersonalTooltip({ data, isRef }) {
                                 fill={false}
                                 sizes='100vw'
                             />
-                        </div>
-                    </div>
-                </div>
+                        </figure>
+                    </section>
+                </Link>
 
                 <hr />
 
-                <div className='user-info-item'>
-                    <div className='user-info-item-left'>See all profile</div>
+                <section className='user-info-item'>
+                    <span className='user-info-item-left'>See all profile</span>
                     <div className='user-info-item-right'>
                         <span>11</span>
                     </div>
-                </div>
-            </div>
+                </section>
+            </section>
 
-            <div className='tool'>
-                <div className='tool-item'>
+            <section className='tool'>
+                <section className='tool-item'>
                     <div className='tool-item-icon'>
                         <i className='fa-solid fa-gear'></i>
                     </div>
                     <span>Setting</span>
-                </div>
-                <div className='tool-item'>
+                </section>
+                <section className='tool-item'>
                     <div className='tool-item-icon'>
                         <i className='fa-solid fa-circle-question'></i>
                     </div>
                     <span>Help & support</span>
-                </div>
-                <div className='tool-item'>
+                </section>
+                <section className='tool-item'>
                     <div className='tool-item-icon'>
                         <i className='fa-solid fa-moon'></i>
                     </div>
                     <span>Display and accessibility</span>
-                </div>
-                <div className='tool-item'>
+                </section>
+                <section className='tool-item'>
                     <div className='tool-item-icon'>
                         <i className='fa-solid fa-message-exclamation'></i>
                     </div>
                     <span>Give feedback</span>
-                </div>
+                </section>
 
-                <div
+                <section
                     className='tool-item'
                     onClick={() => router.push('/auth/login')}>
                     <div className='tool-item-icon'>
                         <i className='fa-solid fa-arrow-right-from-bracket'></i>
                     </div>
                     <span>Log Out</span>
-                </div>
-            </div>
+                </section>
+            </section>
 
-            <div className='about-us'>
+            <section className='about-us'>
                 <Link href=''>Privacy</Link>
                 &#9679;
                 <Link href=''>Terms</Link>
@@ -104,12 +104,12 @@ export default function PersonalTooltip({ data, isRef }) {
                 &#9679;
                 <Link href=''>Cookies </Link>
                 &#9679;
-            </div>
-            <div className='more'>
+            </section>
+            <section className='more'>
                 <Link href=''>More</Link>
                 &#9679;
                 <span>Meta &copy; 2023</span>
-            </div>
-        </div>
+            </section>
+        </section>
     );
 }

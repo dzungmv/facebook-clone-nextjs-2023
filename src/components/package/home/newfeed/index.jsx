@@ -6,6 +6,7 @@ import Image from 'next/image';
 import styles from '../home.module.scss';
 import data from '@/components/data/data.json';
 import Post from '@/components/common/post';
+import Posting from '@/components/common/posting';
 
 export default function Newfeed() {
     const storyContainerRef = useRef(null);
@@ -86,14 +87,14 @@ export default function Newfeed() {
                     {<CreatePostModal />}
                 </Modal>
             )} */}
-            <div className={styles.wrapperNewfeed}>
+            <section className={styles.wrapperNewfeed}>
                 <section className='story'>
-                    <div
+                    <section
                         ref={storyContainerRef}
                         onScroll={handle.scrollStory}
                         className='story-container'>
-                        <div className='story-item-user'>
-                            <div className='story-item-user-header'>
+                        <section className='story-item-user'>
+                            <figure className='story-item-user-header'>
                                 <Image
                                     src={data.user.avatar}
                                     alt='image'
@@ -102,16 +103,16 @@ export default function Newfeed() {
                                     fill={false}
                                     sizes='100vw'
                                 />
-                            </div>
+                            </figure>
 
-                            <div className='story-item-user-content'>
+                            <section className='story-item-user-content'>
                                 <div className='story-item-user-content-add'>
                                     <div className='story-item-user-content-add-btn'>
                                         <i className='fa-regular fa-plus'></i>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </section>
+                        </section>
 
                         {data.users.map((item) => {
                             return (
@@ -124,7 +125,7 @@ export default function Newfeed() {
                                         fill={false}
                                         sizes='100vw'
                                     />
-                                    <div className='story-item-avatar'>
+                                    <figure className='story-item-avatar'>
                                         <Image
                                             src={item.avatar}
                                             alt='image'
@@ -133,14 +134,14 @@ export default function Newfeed() {
                                             fill={false}
                                             sizes='100vw'
                                         />
-                                    </div>
+                                    </figure>
                                     <div className='story-item-username'>
                                         {item.name}
                                     </div>
                                 </div>
                             );
                         })}
-                    </div>
+                    </section>
                     <div
                         ref={btnNextRef}
                         className='story-btn btn-next'
@@ -155,7 +156,7 @@ export default function Newfeed() {
                     </div>
                 </section>
 
-                <section className='create-post'>
+                {/* <section className='create-post'>
                     <div className='create-post-content'>
                         <div className='create-post-content-avatar'>
                             <Image
@@ -223,7 +224,9 @@ export default function Newfeed() {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
+
+                <Posting data={data.user} />
 
                 {data.users.map((item, index) => {
                     return (
@@ -237,7 +240,7 @@ export default function Newfeed() {
                         />
                     );
                 })}
-            </div>
+            </section>
         </>
     );
 }

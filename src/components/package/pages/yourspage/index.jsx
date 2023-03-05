@@ -1,21 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
+
+import data from '@/components/data/data';
 import styles from '../pages.module.scss';
 
-const YourPagesAndProfile = ({ data }) => {
+const YourPagesAndProfile = () => {
     return (
-        <div className={styles.wrapperYourpages}>
-            <div className='your-page-header'>
-                <span>Pages your manage</span>
+        <section className={styles.wrapperYourpages}>
+            <header className='your-page-header'>
+                <h3>Pages your manage</h3>
                 <span>Updated Pages</span>
-                <span>
+                <p>
                     These Pages were updated to the new Pages experience. You
                     can switch into them to manage them.
-                </span>
-            </div>
+                </p>
+            </header>
 
-            <div className='your-page-content'>
-                <div className='your-page-content-left box'>
+            <article className='your-page-content'>
+                <section className='your-page-content-left box'>
                     <div className='your-page-content-left-item'>
                         <div className='your-page-content-left-item-header'>
                             <div className='your-page-content-left-item-header-img'>
@@ -77,27 +79,27 @@ const YourPagesAndProfile = ({ data }) => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div className='your-page-content-right '>
-                    <div className='your-page-content-right-section box'>
-                        <div className='your-page-content-right-section-header'>
-                            <div className='your-page-content-right-section-header-title'>
+                <section className='your-page-content-right '>
+                    <section className='your-page-content-right-section box'>
+                        <section className='your-page-content-right-section-header'>
+                            <h4 className='your-page-content-right-section-header-title'>
                                 Unpublished Pages
-                            </div>
+                            </h4>
                             <div className='your-page-content-right-section-header-info'>
                                 <i className='fa-solid fa-circle-info'></i>
                             </div>
-                        </div>
+                        </section>
 
-                        <div className='your-page-content-right-section-desc'>
+                        <p className='your-page-content-right-section-desc'>
                             Publish these classic Pages to make them visible
                             again to the public.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        </p>
+                    </section>
+                </section>
+            </article>
+        </section>
     );
 };
 

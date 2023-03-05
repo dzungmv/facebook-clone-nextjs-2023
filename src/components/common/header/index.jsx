@@ -20,7 +20,7 @@ const Header = () => {
     return (
         <>
             <header className={styles.wrapperHeader}>
-                <div className='header-left'>
+                <section className='header-left'>
                     <Link href={'/'} className='header-left-logo'>
                         <Image
                             src='https://jungjung261.blob.core.windows.net/nextjs-project/system-ui/branch.svg'
@@ -33,8 +33,8 @@ const Header = () => {
                         />
                     </Link>
                     <Search />
-                </div>
-                <div className='header-center'>
+                </section>
+                <section className='header-center'>
                     {header_ui.map((item) => {
                         return (
                             <Tippy
@@ -49,7 +49,7 @@ const Header = () => {
                                             ? 'header-center-item tab-active'
                                             : 'header-center-item'
                                     }>
-                                    <div className='header-center-item-child'>
+                                    <figure className='header-center-item-child'>
                                         <Image
                                             className='header-center-item-child-main_img'
                                             src={item.icon}
@@ -70,14 +70,14 @@ const Header = () => {
                                             sizes='100vw'
                                             priority={true}
                                         />
-                                    </div>
+                                    </figure>
                                     <div className='line-active'></div>
                                 </Link>
                             </Tippy>
                         );
                     })}
-                </div>
-                <div className='header-right'>
+                </section>
+                <section className='header-right'>
                     <Tippy
                         content='Menu'
                         placement='bottom'
@@ -139,7 +139,7 @@ const Header = () => {
                             animation='scale'
                             arrow={false}
                             trigger='click'>
-                            <div className='header-right-item header-right-avatar'>
+                            <figure className='header-right-item header-right-avatar'>
                                 <Image
                                     src={data.user.avatar}
                                     alt='avatar'
@@ -148,15 +148,15 @@ const Header = () => {
                                     fill={false}
                                     sizes='100vw'
                                 />
-                            </div>
+                            </figure>
                         </Tippy>
                     </Tippy>
-                </div>
+                </section>
             </header>
 
             {toggle && (
                 <section className={styles.wrapperHeaderMenu}>
-                    <div className='menu-heading'>
+                    <header className='menu-heading'>
                         <h1 className='menu-heading-branch'>Facebook</h1>
 
                         <div
@@ -164,9 +164,9 @@ const Header = () => {
                             onClick={() => setToggle(false)}>
                             <li className='fa-light fa-xmark'></li>
                         </div>
-                    </div>
+                    </header>
 
-                    <div className='menu-content'>
+                    <section className='menu-content'>
                         <h3 className='menu-content-title'>Menu</h3>
                         {header_ui.map((item) => (
                             <Link
@@ -177,7 +177,7 @@ const Header = () => {
                                         ? 'menu-content-item menu-content-item-active'
                                         : 'menu-content-item'
                                 }>
-                                <div className='menu-content-item-label'>
+                                <figure className='menu-content-item-label'>
                                     <Image
                                         src={item.icon_active}
                                         alt='icon'
@@ -187,13 +187,13 @@ const Header = () => {
                                         sizes='100vw'
                                         priority={true}
                                     />
-                                </div>
+                                </figure>
                                 <span>{item.name}</span>
                             </Link>
                         ))}
-                    </div>
+                    </section>
 
-                    <div className='menu-sidebar'>
+                    <section className='menu-sidebar'>
                         <h3 className='menu-content-title'>Shortcuts</h3>
                         {side_bar_ui.map((item) => (
                             <Link
@@ -204,7 +204,7 @@ const Header = () => {
                                         ? 'menu-content-item menu-content-item-active'
                                         : 'menu-content-item'
                                 }>
-                                <div className='menu-content-item-label'>
+                                <figure className='menu-content-item-label'>
                                     <Image
                                         src={item.icon}
                                         alt='icon'
@@ -214,11 +214,11 @@ const Header = () => {
                                         sizes='100vw'
                                         priority={true}
                                     />
-                                </div>
+                                </figure>
                                 <span>{item.name}</span>
                             </Link>
                         ))}
-                    </div>
+                    </section>
                 </section>
             )}
         </>
