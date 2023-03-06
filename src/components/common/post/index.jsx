@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Gallery from '../gallery';
 import styles from './post.module.scss';

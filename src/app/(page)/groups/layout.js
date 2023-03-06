@@ -1,5 +1,13 @@
-import GroupHeader from '@/components/package/groups/header';
+import dynamic from 'next/dynamic';
+// import GroupHeader from '@/components/package/groups/header';
 import styles from '@/components/package/groups/groups.module.scss';
+
+const GroupHeader = dynamic(
+    () => import('@/components/package/groups/header'),
+    {
+        ssr: false,
+    }
+);
 
 export default function DashboardLayout({ children }) {
     return (

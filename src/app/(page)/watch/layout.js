@@ -1,5 +1,10 @@
-import WatchSidebar from '@/components/package/watch';
+import dynamic from 'next/dynamic';
+// import WatchSidebar from '@/components/package/watch';
 import styles from '@/components/package/watch/watch.module.scss';
+
+const WatchSidebar = dynamic(() => import('@/components/package/watch'), {
+    ssr: false,
+});
 
 export default function DashboardLayout({ children }) {
     return (
