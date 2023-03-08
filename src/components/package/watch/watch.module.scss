@@ -5,6 +5,10 @@
     // overflow: hidden !important;
     // max-height: 100vh;
 
+    :global .nav-mobile {
+        display: none;
+    }
+
     :global .page-left {
         width: 25%;
 
@@ -120,6 +124,86 @@
         padding-top: 68px;
         overflow: auto;
     }
+
+    @media screen and (max-width: 1023px) {
+        :global .nav-mobile {
+            display: block;
+        }
+
+        :global .page-left {
+            display: none;
+        }
+
+        :global .page-right {
+            width: 100%;
+            padding-top: 150px;
+        }
+    }
+}
+
+.wrapperNavMobile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    // justify-content: space-around;
+    position: fixed;
+    top: 54px;
+    padding: 16px 16px 6px 16px;
+    gap: 0 8px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    :global .nav-item {
+        width: calc(100% / 4);
+        display: flex;
+        align-items: center;
+        gap: 0 6px;
+        padding: 5px 8px;
+        border-radius: 10px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(22, 24, 35, 0.04);
+        }
+
+        &-icon {
+            width: 37px;
+            height: 37px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: var.$bg_icon;
+        }
+
+        span {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        &-active {
+            background-color: var.$btn_bg_hover;
+
+            .nav-item {
+                &-name {
+                    color: var.$color_primary;
+                }
+                &-icon {
+                    color: var.$color_primary;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        padding: 12px 8px 6px 8px;
+        :global .nav-item {
+            justify-content: center;
+            &-name {
+                display: none;
+            }
+        }
+    }
 }
 
 .wrapperWatchHome {
@@ -185,5 +269,23 @@
     }
     :global .content {
         margin-top: 32px;
+    }
+
+    @media screen and (max-width: 1023px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 600px) {
+        :global .story {
+            border-radius: 0;
+            &-content {
+                flex-direction: column;
+                gap: 12px 0;
+
+                &-item {
+                    width: 100%;
+                }
+            }
+        }
     }
 }

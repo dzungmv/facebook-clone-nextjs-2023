@@ -134,10 +134,12 @@ const GroupHeader = () => {
                                 );
                             })}
 
-                            <div className='nav-item'>
-                                <span>More</span>
-                                <i className='fa-solid fa-caret-down'></i>
-                            </div>
+                            <section className='nav-item-wrapper'>
+                                <div className='nav-item'>
+                                    <span>More</span>
+                                    <i className='fa-solid fa-caret-down'></i>
+                                </div>
+                            </section>
                         </section>
 
                         <section className='group-nav-right'>

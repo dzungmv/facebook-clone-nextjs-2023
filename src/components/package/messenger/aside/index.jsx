@@ -16,7 +16,7 @@ const AsideMessenger = () => {
     return (
         <section className={styles.wrapperAsideMessenger}>
             <section className='container__left--header'>
-                <h4>Chats </h4>
+                <h3>Chats</h3>
 
                 <section className='action'>
                     <div className='action-item'>

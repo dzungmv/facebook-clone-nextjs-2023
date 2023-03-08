@@ -18,6 +18,9 @@ const Chat = ({ data }) => {
         <section className={styles.wrapperChat}>
             <section className='container__right--header'>
                 <section className='user'>
+                    <div className='out-icon' onClick={() => router.back()}>
+                        <i className='fa-solid fa-arrow-left'></i>
+                    </div>
                     <figure className='user__avatar'>
                         <Image
                             src={data.avatar}

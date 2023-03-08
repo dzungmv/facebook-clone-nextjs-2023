@@ -36,7 +36,7 @@
     }
 
     @media screen and (max-width: 600px) {
-        padding: 8px;
+        padding: 0;
         :global .homepage-item-center {
             width: 100%;
         }
@@ -387,6 +387,9 @@
     }
 
     @media screen and (max-width: 600px) {
+        :global .story {
+            border-radius: 0;
+        }
         :global .create-post {
             &-content {
                 &-input {

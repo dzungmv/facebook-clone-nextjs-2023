@@ -133,6 +133,9 @@
                         font-size: 15px;
                         line-height: calc(24 / 15);
                         color: var.$color_text;
+                        @media screen and (max-width: 424px) {
+                            font-size: 12px;
+                        }
                     }
                 }
 
@@ -144,6 +147,10 @@
                     font-size: 15px;
                     line-height: calc(24 / 15);
                     color: var.$color_text;
+
+                    @media screen and (max-width: 424px) {
+                        font-size: 12px;
+                    }
                 }
             }
 

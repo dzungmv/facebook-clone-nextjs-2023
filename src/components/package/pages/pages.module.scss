@@ -7,10 +7,31 @@
         width: 25%;
     }
 
+    :global .sidebar-mobile {
+        width: 100%;
+        display: none;
+    }
+
     :global .page-right {
         width: 75%;
         padding-top: 68px;
         padding-bottom: 16px;
+    }
+
+    @media screen and (max-width: 1023px) {
+        flex-direction: column;
+        :global .page-left {
+            display: none;
+        }
+
+        :global .sidebar-mobile {
+            display: block;
+        }
+
+        :global .page-right {
+            width: 100%;
+            padding-top: 150px;
+        }
     }
 }
 
@@ -235,6 +256,71 @@
     }
 }
 
+.wrapperSidebarMobile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    // justify-content: space-around;
+    position: fixed;
+    top: 54px;
+    padding: 16px 16px 6px 16px;
+    gap: 0 8px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    :global .nav-item {
+        width: calc(100% / 4);
+        display: flex;
+        align-items: center;
+        gap: 0 6px;
+        padding: 5px 8px;
+        border-radius: 10px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(22, 24, 35, 0.04);
+        }
+
+        &-icon {
+            width: 37px;
+            height: 37px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: var.$bg_icon;
+        }
+
+        span {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        &-active {
+            background-color: var.$btn_bg_hover;
+
+            .nav-item {
+                &-name {
+                    color: var.$color_primary;
+                }
+                &-icon {
+                    color: var.$color_primary;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        padding: 12px 8px 6px 8px;
+        :global .nav-item {
+            justify-content: center;
+            &-name {
+                display: none;
+            }
+        }
+    }
+}
+
 .wrapperDiscover {
     width: 90%;
     margin: 0 auto;
@@ -349,6 +435,24 @@
             }
         }
     }
+
+    @media screen and (max-width: 1023px) {
+        :global .content {
+            &-card {
+                width: calc(100% / 2 - 16px);
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        width: 100%;
+        padding: 0 8px;
+        :global .content {
+            &-card {
+                width: 100%;
+            }
+        }
+    }
 }
 
 .wrapperInvitation {
@@ -400,6 +504,7 @@
                 }
 
                 &-right {
+                    flex: 1;
                     &-name {
                         font-size: 20px;
                         font-weight: 700;
@@ -430,6 +535,7 @@
                     }
 
                     &-name {
+                        flex: 1;
                         font-size: 14px;
                         font-weight: 600;
                         line-height: calc(20 / 16);
@@ -487,6 +593,20 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        width: 100%;
+
+        :global .header {
+            padding: 0 16px;
+        }
+
+        :global .content {
+            .box {
+                border-radius: 0;
             }
         }
     }
@@ -615,6 +735,29 @@
     :global .all-page {
         &-item {
             box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        width: 100%;
+
+        :global .box {
+            border-radius: 0;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        background-color: #fff;
+        :global .box {
+            padding: 8px;
+            box-shadow: none;
+        }
+        :global .changed-section {
+            &-content {
+                &-item {
+                    width: 100%;
+                }
+            }
         }
     }
 }
@@ -832,6 +975,33 @@
                     color: var.$color_text;
                     margin-top: 6px;
                 }
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        width: 100%;
+
+        :global .your-page-header {
+            padding: 0 8px;
+        }
+
+        :global .your-page-content {
+            flex-direction: column-reverse;
+            gap: 20px 0;
+
+            .box {
+                border-radius: 0;
+                padding: 8px;
+            }
+
+            &-left {
+                width: 100%;
+                // padding: 0 8px;
+            }
+
+            &-right {
+                width: 100%;
             }
         }
     }

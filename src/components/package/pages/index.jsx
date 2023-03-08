@@ -12,15 +12,12 @@ import Link from 'next/link';
 const PagesSidebar = () => {
     const pathname = usePathname();
 
-    const pageLeftRef = useRef(null);
     const [yourPage, setYourPage] = useState(true);
 
     return (
         <section className={styles.wrapperSidebar}>
             <section className='sidebar-wrapper'>
-                <section
-                    useRef={pageLeftRef}
-                    className='sidebar-wrapper-container'>
+                <section className='sidebar-wrapper-container'>
                     <header className='sidebar-wrapper-header'>
                         <h3 className='sidebar-wrapper-header-title'>Pages</h3>
                         <div className='sidebar-wrapper-header-action'>

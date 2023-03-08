@@ -1,4 +1,5 @@
 import styles from '@/components/package/marketplace/market.module.scss';
+import NavMobile from '@/components/package/marketplace/nav-mobile';
 import dynamic from 'next/dynamic';
 // import AsideBar from '@/components/package/marketplace/sidebar';
 
@@ -15,6 +16,10 @@ export default function DashboardLayout({ children }) {
             <aside className='page-left'>
                 <AsideBar />
             </aside>
+
+            <section className='nav-mobile'>
+                <NavMobile />
+            </section>
             <section className='page-right'>{children}</section>
         </main>
     );
